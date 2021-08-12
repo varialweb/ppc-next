@@ -1,3 +1,4 @@
+import { h } from 'preact'
 import { useState } from 'preact/hooks'
 import Link from 'next/link'
 import styles from '../styles/nav.module.scss'
