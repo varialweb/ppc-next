@@ -16,7 +16,7 @@ export default function Card({ title, snip, img}) {
         />
       </div>
       <h3>{title}</h3>
-      <p class={styles.snip}>{snip}</p>
+      <p className={styles.snip}>{snip}</p>
       <Link href={link}>
         <button>View More</button>
       </Link>

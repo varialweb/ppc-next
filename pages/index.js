@@ -37,7 +37,7 @@ export default function Home() {
           We are your certified Four Seasons Sunroom Dealer & Outdoor Living Specialists.
         </p>
         <section className={styles.cards}>
-          <h2 class='h2-margin-top'>Our Products</h2>
+          <h2 className='h2-margin-top'>Our Products</h2>
           <Card 
             title="Sunrooms"
             snip="
