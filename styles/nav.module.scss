@@ -1,6 +1,7 @@
 .navWrapper {
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 .nav {
@@ -11,7 +12,7 @@
       '. links';
   padding: 14px 1rem;
   width: 100vw;
-  z-index: 10;
+  // z-index: 10;
 
   @media (min-width: 769px) {
     align-items: center;

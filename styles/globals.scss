@@ -24,3 +24,31 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: 'Playfair Display';
 }
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+
+  @media (min-width: 769px) {
+      font-size: 2.4rem;
+  }
+}
+
+h2 {
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5;
+  font-weight: 300;
+  hyphens: auto;
+  
+  @media(min-width: 769px) {
+      width: 21.7rem;
+  }
+}
+
+button {
+  font-family: 'Playfair Display';
+  font-size: 0.8rem;
+}

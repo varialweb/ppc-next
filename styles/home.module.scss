@@ -16,3 +16,40 @@
     display: block;
   }
 }
+
+.main {
+  padding-block: 2rem;
+
+  h1 {
+      margin-block-end: 2rem;
+      text-align: center;
+      margin-inline: auto;
+  }
+
+  h1, p {
+      @media (max-width: 768px) {
+          width: 14rem;
+      }
+  }
+
+  h2 {
+      background: hsl(200 25% 15%);
+      font-size: 1.6em;
+      color: hsl(0 0% 100%);
+      padding-block: 0.5em;
+      text-align: center;
+      width: 100vw;
+  }
+
+  .h2-margin-top {
+      margin-block-start: 3em;
+  }
+
+  p {
+      margin-inline: auto;
+  }
+
+  @media (min-width: 769px) {
+      padding-inline: 0;
+  }
+}
