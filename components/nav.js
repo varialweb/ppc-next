@@ -3,7 +3,7 @@ import styles from '../styles/nav.module.scss'
 
 export default function Nav() {
   return (
-    <section>
+    <section className={styles.navWrapper}>
       <nav className={styles.nav}>
         <button className={styles.financeButton}>Finance</button>
         <button className={styles.hamburgerButton} aria-label="dropdown menu">
