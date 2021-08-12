@@ -1,12 +1,20 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import styles from '../styles/nav.module.scss'
 
 export default function Nav() {
+  const [menuOpen, setDropdown] = useState(false)
+
   return (
     <section className={styles.navWrapper}>
       <nav className={styles.nav}>
         <button className={styles.financeButton}>Finance</button>
-        <button className={styles.hamburgerButton} aria-label="dropdown menu">
+        <button 
+          className={styles.hamburgerButton} 
+          aria-label="dropdown menu"
+          onClick={() => {
+            setDropdown(!menuOpen)
+          }}>
           <svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="Home---Mobile" transform="translate(-258.000000, -22.000000)" fill="#000000" fillRule="nonzero">
@@ -19,7 +27,7 @@ export default function Nav() {
         </button>
         <section className={styles.navLinks}>
           <Link href="/"><a>Home</a></Link>
-          <Link href="/"><a>About</a></Link>
+          <Link href="/about/"><a>About</a></Link>
           <Link href="/"><a>Blog</a></Link>
           <Link href="/"><a>Contact</a></Link>
           <button>Products</button>
@@ -34,9 +42,9 @@ export default function Nav() {
         </section>
         <section className={styles.emptyNavDiv}></section>
       </nav>
-      <section className={styles.navLinksMob}>
+      <section style={{ visibility: menuOpen ? 'visible' : 'hidden' }} className={styles.navLinksMob}>
         <Link href="/"><a>Home</a></Link>
-        <Link href="/"><a>About</a></Link>
+        <Link href="/about/"><a>About</a></Link>
         <Link href="/"><a>Blog</a></Link>
         <Link href="/"><a>Contact</a></Link>
         <button>Products</button>
