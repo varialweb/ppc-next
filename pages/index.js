@@ -1,4 +1,4 @@
-// import Image from 'next/image'
+import Image from 'next/image'
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Card from '../components/card'
@@ -11,13 +11,17 @@ export default function Home() {
         <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-720w.webp" as="image"/>
       </Head>
       <section className={styles.hero}>
-        <img
+        <div className={styles.heroImgWrapper}>
+          <Image
             className={styles.heroImg}
             src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-720w.webp"
             width="720"
             height="802"
             alt="Two giant sunrooms on a mansion"
-        />
+            placeholder="blur"
+            blurDataURL="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-placeholder-720w.jpg"
+          />
+        </div>
         <img
             className={styles.heroImgPc}
             src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-1920w.webp"

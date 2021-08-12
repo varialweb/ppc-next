@@ -3,9 +3,16 @@
   height: auto;
 }
 
-.heroImg {
+.heroImgWrapper {
   @media (min-width: 769px) {
     display: none;
+  }
+}
+
+.heroImg {
+  @media (min-width: 769px) {
+    // display: none!important;
+    width: 10vw!important;
   }
 }
 
