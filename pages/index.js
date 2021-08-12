@@ -19,7 +19,7 @@ export default function Home() {
             height="802"
             alt="Two giant sunrooms on a mansion"
             placeholder="blur"
-            blurDataURL="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-placeholder-720w.jpg"
+            blurDataURL="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-placeholder-36w.jpg"
           />
         </div>
         <img
