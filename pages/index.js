@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Card from '../components/card'
+import Features from '../components/features'
 import styles from '../styles/home.module.scss'
 
 export default function Home() {
@@ -119,6 +120,7 @@ export default function Home() {
             }}
           />
         </section>
+        <Features />
       </main>
     </Layout>
   )
