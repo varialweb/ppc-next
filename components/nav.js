@@ -1,6 +1,8 @@
+import Link from 'next/link'
 import styles from '../styles/nav.module.scss'
 
 export default function Nav() {
+
   return (
     <section>
       <nav className={styles.nav}>
@@ -17,35 +19,35 @@ export default function Nav() {
           </svg>
         </button>
         <section className={styles.navLinks}>
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Blog</a>
-          <a href="/">Contact</a>
+          <Link href="/"><a>Home</a></Link>
+          <Link href="/"><a>About</a></Link>
+          <Link href="/"><a>Blog</a></Link>
+          <Link href="/"><a>Contact</a></Link>
           <button>Products</button>
           <div className={styles.products}>
-            <a href="/">Sunrooms</a>
-            <a href="/">Liferooms</a>
-            <a href="/">Patio Covers</a>
-            <a href="/">Decks</a>
-            <a href="/">Handrails</a>
-            <a href="/">Retractable Awnings</a>
+            <Link href="/"><a>Sunrooms</a></Link>
+            <Link href="/"><a>Liferooms</a></Link>
+            <Link href="/"><a>Patio Covers</a></Link>
+            <Link href="/"><a>Decks</a></Link>
+            <Link href="/"><a>Handrails</a></Link>
+            <Link href="/"><a>Retractable Awnings</a></Link>
           </div>
         </section>
         <section className={styles.emptyNavDiv}></section>
       </nav>
       <section className={styles.navLinksMob}>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Blog</a>
-        <a href="/">Contact</a>
+        <Link href="/"><a>Home</a></Link>
+        <Link href="/"><a>About</a></Link>
+        <Link href="/"><a>Blog</a></Link>
+        <Link href="/"><a>Contact</a></Link>
         <button>Products</button>
         <div class="products-mobile">
-          <a href="/">Sunrooms</a>
-          <a href="/">Liferooms</a>
-          <a href="/">Patio Covers</a>
-          <a href="/">Decks</a>
-          <a href="/">Handrails</a>
-          <a href="/">Retractable Awnings</a>
+          <Link href="/"><a>Sunrooms</a></Link>
+          <Link href="/"><a>Liferooms</a></Link>
+          <Link href="/"><a>Patio Covers</a></Link>
+          <Link href="/"><a>Decks</a></Link>
+          <Link href="/"><a>Handrails</a></Link>
+          <Link href="/"><a>Retractable Awnings</a></Link>
         </div>
       </section>
     </section>
