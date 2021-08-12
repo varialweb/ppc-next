@@ -9,4 +9,7 @@ module.exports = {
 
     return config;
   },
+  images: {
+    domains: ['d35tzt7i3ppzs4.cloudfront.net'],
+  }
 }
