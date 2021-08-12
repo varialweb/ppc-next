@@ -12,14 +12,12 @@ export default function Home() {
       </Head>
       <section className={styles.hero}>
         <div className={styles.heroImgWrapper}>
-          <Image
+          <img
             className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-720w.webp"
+            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-q10-720w.webp"
             width="720"
             height="802"
             alt="Two giant sunrooms on a mansion"
-            placeholder="blur"
-            blurDataURL="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-placeholder-36w.jpg"
           />
         </div>
         <img
