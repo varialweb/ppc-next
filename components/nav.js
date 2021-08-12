@@ -2,7 +2,6 @@ import Link from 'next/link'
 import styles from '../styles/nav.module.scss'
 
 export default function Nav() {
-
   return (
     <section>
       <nav className={styles.nav}>
@@ -41,7 +40,7 @@ export default function Nav() {
         <Link href="/"><a>Blog</a></Link>
         <Link href="/"><a>Contact</a></Link>
         <button>Products</button>
-        <div class="products-mobile">
+        <div className={styles.productsMob}>
           <Link href="/"><a>Sunrooms</a></Link>
           <Link href="/"><a>Liferooms</a></Link>
           <Link href="/"><a>Patio Covers</a></Link>
