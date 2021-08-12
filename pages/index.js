@@ -27,6 +27,7 @@ export default function Home() {
             width="1920"
             height="760"
             alt="Two giant sunrooms on a mansion"
+            loading="lazy"
         />
       </section>
       <main className={styles.main}>
