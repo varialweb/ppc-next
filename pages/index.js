@@ -31,7 +31,7 @@ export default function Home() {
         />
       </section>
       <main className={styles.main}>
-        <h1>Transform Your Outdoor Living</h1>
+        <h1>Transform <br /> Your Outdoor Living</h1>
         <p>
           Here in the Pacific Northwest, we have beautiful landscapes and stunning views.
           You should be able to enjoy your own patio area, no matter what the weather brings us.

@@ -22,8 +22,10 @@
       justify-self: center;
 
       @media (min-width: 769px) {
-          height: 6em;
+          height: 5em;
+          width: 5em;
           align-self: center;
+          // width: auto;
       }
   }
 
@@ -40,7 +42,7 @@
       @media (min-width: 769px) {
           display: grid;
           grid-template-columns: repeat(5, 1fr);
-
+          margin-block: 1em;
 
           h3 {
               // margin: 0 auto;

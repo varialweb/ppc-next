@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Nav from './nav'
+import Footer from './footer'
 import styles from '../styles/layout.module.scss'
 
 export default function Layout({ title, children }) {
@@ -24,7 +25,7 @@ export default function Layout({ title, children }) {
         </Link>
       </header>
       {children}
-      <footer>Footer</footer>
+      <Footer />
     </div>
   )
 }

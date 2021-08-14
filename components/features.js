@@ -323,7 +323,7 @@ export default function Features() {
 </div>
 <div>
     <h3>Longevity</h3>
-    <Image src="https://d35tzt7i3ppzs4.cloudfront.net/longevity-350w.webp" 
+    <img src="https://d35tzt7i3ppzs4.cloudfront.net/longevity-350w.webp" 
          alt="happy old man illustration"
          width='350'
          height='430'
