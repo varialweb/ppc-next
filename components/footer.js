@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from '../styles/footer.module.scss'
 
 export default function Footer() {
@@ -10,27 +11,42 @@ export default function Footer() {
         <p><a href="mailto:precisionpatiocovers@gmail.com">precisionpatiocovers@gmail.com</a></p>
       </address>
       <div className={styles.footerSocialIcons}>
-        <img src='https://precisionpatios.s3.us-west-2.amazonaws.com/facebook-icon.png' alt='Facebook' />
-        <img src='https://precisionpatios.s3.us-west-2.amazonaws.com/instagram-icon.png' alt='Instagram' />
-        <img src='https://precisionpatios.s3.us-west-2.amazonaws.com/linkedin-icon.png' alt='LinkedIn' />
+        <img 
+          src='https://d35tzt7i3ppzs4.cloudfront.net/facebook-icon.png' 
+          alt='Facebook' 
+          width='256'
+          height='256'
+        />
+        <img 
+          src='https://d35tzt7i3ppzs4.cloudfront.net/instagram-icon.png' 
+          alt='Instagram' 
+          width='256'
+          height='256'
+        />
+        <img 
+          src='https://d35tzt7i3ppzs4.cloudfront.net/linkedin-icon.png' 
+          alt='LinkedIn' 
+          width='301'
+          height='256'
+        />
       </div>
       <div className={styles.footerProductLinks}>
-        <a href='/'>Sunrooms</a>
-        <a href='/'>Liferooms</a>
-        <a href='/'>Patio Covers</a>
-        <a href='/'>Decks</a>
-        <a href='/'>Power Screens</a>
-        <a href='/'>Handrails</a>
-        <a href='/'>Retractable Awnings</a>
+        <Link href='/'><a>Sunrooms</a></Link>
+        <Link href='/'><a>Liferooms</a></Link>
+        <Link href='/'><a>Patio Covers</a></Link>
+        <Link href='/'><a>Decks</a></Link>
+        <Link href='/'><a>Power Screens</a></Link>
+        <Link href='/'><a>Handrails</a></Link>
+        <Link href='/'><a>Retractable Awnings</a></Link>
       </div>
       <div className={styles.footerPageLinks}>
-        <a href='/'>Home</a>
-        <a href='/'>About</a>
-        <a href='/'>Blog</a>
-        <a href='/'>Contact</a>
-        <a href='/'>FAQ</a>
-        <a href='/'>Privacy Policy</a>
-        <a href='/'>Credits</a>
+        <Link href='/'><a>Home</a></Link>
+        <Link href='/'><a>About</a></Link>
+        <Link href='/'><a>Blog</a></Link>
+        <Link href='/'><a>Contact</a></Link>
+        <Link href='/'><a>FAQ</a></Link>
+        <Link href='/'><a>Privacy Policy</a></Link>
+        <Link href='/'><a>Credits</a></Link>
       </div>
       <p className={styles.copyright}>&copy;2018-2021</p>
     </footer>
