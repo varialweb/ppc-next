@@ -5,7 +5,7 @@
 
 .heroImgWrapper {
   display: grid;
-  grid-template-columns: repeat(2, 100vw);
+  grid-template-columns: repeat(3, 100vw);
 
   @media (min-width: 769px) {
     display: none;
@@ -14,7 +14,7 @@
 
 .heroImg {
   position: relative;
-  animation-duration: 8s;
+  animation-duration: 18s;
   animation-iteration-count: infinite;
   opacity: 1;
 
@@ -28,6 +28,12 @@
     animation-name: heroImg2;
   }
 
+  &:nth-child(3) {
+    left: -200%;
+    opacity: 0;
+    animation-name: heroImg3;
+  }
+
 
   @media (min-width: 769px) {
     // display: none!important;
@@ -38,7 +44,10 @@
   0% {
     opacity: 1;
   }
-  50% {
+  33% {
+    opacity: 0;
+  }
+  66% {
     opacity: 0;
   }
   100% {
@@ -50,7 +59,25 @@
   0% {
     opacity: 0;
   }
-  50% {
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heroImg3 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
     opacity: 1;
   }
   100% {
