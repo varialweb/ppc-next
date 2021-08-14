@@ -12,6 +12,16 @@
   padding: 2rem 0.5em;
   row-gap: 2rem;
 
+  @media (min-width: 769px) {
+    grid-template-areas: 
+      '. address .'
+      'products social page'
+      '. copy .';
+    padding-inline: 4em;
+    padding-block: 2rem;
+    row-gap: 1em;
+  }
+
   p {
       line-height: inherit;
       margin: 0;
@@ -27,19 +37,26 @@
       font-style: normal;
       grid-area: address;
       text-align: center;
+      justify-self: center;
   }
 
   .footerSocialIcons {
     // background: #00f;
     display: flex;
     grid-area: social;
-    justify-content: space-evenly;
+    justify-content: center;
     // justify-self: center;
     width: 100%;
 
+    @media (min-width: 769px) {
+      align-self: center;
+    }
+
     img {
-      width: 3em;
-      height: auto;
+      // width: 3em;
+      height: 3em;
+      width: auto;
+      margin-inline: 1.5em;
     }
   }
 
@@ -57,5 +74,10 @@
   .copyright {
       grid-area: copy;
       text-align: center;
+      justify-self: center;
+
+      @media (min-width: 769px) {
+        margin-top: 1em;
+      }
   }
 }
