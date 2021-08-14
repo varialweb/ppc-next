@@ -5,7 +5,7 @@
 
 .heroImgWrapper {
   display: grid;
-  grid-template-columns: repeat(3, 100vw);
+  grid-template-columns: repeat(4, 100vw);
 
   @media (min-width: 769px) {
     display: none;
@@ -14,24 +14,28 @@
 
 .heroImg {
   position: relative;
-  animation-duration: 18s;
+  animation-duration: 24s;
   animation-iteration-count: infinite;
-  opacity: 1;
+  opacity: 0;
 
   &:nth-child(1) {
     animation-name: heroImg1;
+    opacity: 1;
   }
   
   &:nth-child(2) {
     left: -100%;
-    opacity: 0;
     animation-name: heroImg2;
   }
 
   &:nth-child(3) {
     left: -200%;
-    opacity: 0;
     animation-name: heroImg3;
+  }
+
+  &:nth-child(4) {
+    left: -300%;
+    animation-name: heroImg4;
   }
 
 
@@ -44,10 +48,13 @@
   0% {
     opacity: 1;
   }
-  33% {
-    opacity: 0;
-  }
-  66% {
+  // 25% {
+  //   opacity: 0;
+  // }
+  // 50% {
+  //   opacity: 0;
+  // }
+  75% {
     opacity: 0;
   }
   100% {
@@ -59,25 +66,37 @@
   0% {
     opacity: 0;
   }
-  33% {
+  25% {
     opacity: 1;
   }
-  66% {
+  50% {
     opacity: 0;
   }
-  100% {
-    opacity: 0;
-  }
+  // 100% {
+  //   opacity: 0;
+  // }
 }
 
 @keyframes heroImg3 {
   0% {
     opacity: 0;
   }
-  33% {
+  25% {
     opacity: 0;
   }
-  66% {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heroImg4 {
+  50% {
+    opacity: 0;
+  }
+  75% {
     opacity: 1;
   }
   100% {
