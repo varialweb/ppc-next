@@ -10,7 +10,9 @@ export default function Home() {
     <Layout title="Transform Your Outdoor Living">
       <Head>
         <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-q10-720w.webp" as="image"/>
-        <link preload="https://d35tzt7i3ppzs4.cloudfront.net" as="image"/>
+        <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-720w.webp" as="image"/>
+        <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-720w.webp" as="image"/>
+        <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-720w.webp" as="image"/>
       </Head>
       <section className={styles.hero}>
         <div className={styles.heroImgWrapper}>
