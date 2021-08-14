@@ -4,15 +4,57 @@
 }
 
 .heroImgWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 100vw);
+
   @media (min-width: 769px) {
     display: none;
   }
 }
 
 .heroImg {
+  position: relative;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+
+  &:nth-child(1) {
+    animation-name: heroImg1;
+  }
+  
+  &:nth-child(2) {
+    left: -100%;
+    opacity: 0;
+    animation-name: heroImg2;
+  }
+
+
   @media (min-width: 769px) {
     // display: none!important;
-    width: 10vw!important;
+  }
+}
+
+@keyframes heroImg1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heroImg2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
