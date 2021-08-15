@@ -1,4 +1,3 @@
-// import { h } from 'preact'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from '../styles/nav.module.scss'
