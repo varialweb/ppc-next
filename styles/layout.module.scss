@@ -1,12 +1,13 @@
 .header {
   display: grid;
-  padding-block: 1.5rem;
+  padding-block: 1.7335rem;
   place-content: center;
 }
 
 .headerImage {
-  width: 46vw;
-  height: auto;
+  // width: 46vw;
+  height: 5.8rem;
+  width: auto;
 
   @media (min-width: 769px) {
       width: 10vw;

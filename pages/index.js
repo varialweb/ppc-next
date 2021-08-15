@@ -18,37 +18,37 @@ export default function Home() {
         <div className={styles.heroImgWrapper}>
           <img
             className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-q10-720w.webp"
+            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-v4-720w.webp"
             width="720"
-            height="802"
+            height="720"
             alt="Two giant sunrooms on a mansion"
           />
           <img
             className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-720w.webp"
+            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-v4-720w.webp"
             width="720"
-            height="802"
+            height="720"
             alt="Two giant sunrooms on a mansion"
           />
           <img
             className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-720w.webp"
+            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-v4-720w.webp"
             width="720"
-            height="802"
+            height="720"
             alt="Two giant sunrooms on a mansion"
           />
           <img
             className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-720w.webp"
+            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-v4-720w.webp"
             width="720"
-            height="802"
+            height="568"
             alt="Two giant sunrooms on a mansion"
           />
           <img
             className={styles.heroImg}
-            src="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-720w.webp"
+            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-v4-720w.webp"
             width="720"
-            height="802"
+            height="568"
             alt="Two giant sunrooms on a mansion"
           />
         </div>
