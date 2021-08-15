@@ -44,6 +44,13 @@ export default function Home() {
             height="802"
             alt="Two giant sunrooms on a mansion"
           />
+          <img
+            className={styles.heroImg}
+            src="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-720w.webp"
+            width="720"
+            height="802"
+            alt="Two giant sunrooms on a mansion"
+          />
         </div>
         <img
             className={styles.heroImgPc}
