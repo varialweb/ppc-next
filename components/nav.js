@@ -1,28 +1,21 @@
 // import { h } from 'preact'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from '../styles/nav.module.scss'
 
 export default function Nav() {
   const [menuOpen, setDropdown] = useState(false)
 
-  const listener = () => {
-
-  }
+  useEffect(() => {
+    if (menuOpen) {
+      if (document) {
+        console.log(document.body)
+      }
+    }
+  })
 
   return (
     <section className={styles.navWrapper} id='nav-wrapper'>
-      {/* { 
-        if (window) {
-          window.addEventListener('scroll', () => {
-            if (menuOpen) {
-              const mobLinks = document.querySelector('#mobile-nav-links')
-              const nav = document.querySelector('#nav-wrapper')
-              console.log(nav)
-            }
-          }, {passive: true})}
-        }
-      } */}
       <nav className={styles.nav}>
         <button className={styles.financeButton}>Finance</button>
         <button 
@@ -62,7 +55,6 @@ export default function Nav() {
         className={styles.navLinksMob}
         style={{ 
           visibility: menuOpen ? 'visible' : 'hidden', 
-          top: document ? document.querySelector('#nav-wrapper').getBoundingClientRect().bottom : auto, 
         }} 
       >
         <Link href="/"><a>Home</a></Link>
