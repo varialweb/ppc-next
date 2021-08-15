@@ -12,6 +12,7 @@ export default function Card({ title, snip, img}) {
           alt={img.alt}
           width={608}
           height={455}
+          loading="eager"
         />
       </div>
       <h3>{title}</h3>
