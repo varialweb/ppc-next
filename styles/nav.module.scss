@@ -46,7 +46,11 @@
   grid-area: hamburger;
   justify-self: end;
   margin-block-start: 0.2rem;
-  width: fit-content;
+  // width: fit-content;
+  // width: 1.2rem;
+  width: 1.8rem;
+  height: 1.2rem;
+  // max-width: 48px;
 
   @media (min-width: 769px) {
     display: none;
