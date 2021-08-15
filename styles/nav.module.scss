@@ -10,7 +10,7 @@
   grid-template-areas: 
       'finance hamburger'
       '. links';
-  padding: 14px 1rem;
+  padding: 0.7rem 1rem;
   width: 100vw;
   // z-index: 10;
 
@@ -48,9 +48,17 @@
   margin-block-start: 0.2rem;
   // width: fit-content;
   // width: 1.2rem;
-  width: 1.8rem;
-  height: 1.2rem;
+  // width: 1.8rem;
+  // height: 1.2rem;
+  padding: 0;
+  width: fit-content;
   // max-width: 48px;
+
+  svg {
+    width: 1.8rem;
+    height: 1.2rem;
+    // height: inherit;
+  }
 
   @media (min-width: 769px) {
     display: none;
@@ -63,9 +71,11 @@
   // visibility: hidden;
   display: grid;
   grid-area: links;
+  justify-content: flex-end;
   padding-block-end: 0.25rem;
-  padding-inline-end: 1.2rem;
-  padding-right: 1.2rem;
+  // padding-inline-end: 1.2rem;
+  // padding-right: 1.2rem;
+  padding-inline-end: 1rem;
   position: fixed;
   text-align: right;
   width: 100vw;
