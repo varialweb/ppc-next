@@ -9,7 +9,10 @@ export default function Nav() {
   useEffect(() => {
     if (menuOpen) {
       if (document) {
-        console.log(document.body)
+        const nav = document.querySelector('#nav-wrapper')
+        const mobNavLinks = document.querySelector('#nav-links-mob')
+
+        mobNavLinks.style.top = nav.getBoundingClientRect().bottom + 'px'
       }
     }
   })
@@ -53,9 +56,8 @@ export default function Nav() {
       </nav>
       <section 
         className={styles.navLinksMob}
-        style={{ 
-          visibility: menuOpen ? 'visible' : 'hidden', 
-        }} 
+        id='nav-links-mob'
+        style={{ visibility: menuOpen ? 'visible' : 'hidden'}} 
       >
         <Link href="/"><a>Home</a></Link>
         <Link href="/about/"><a>About</a></Link>
