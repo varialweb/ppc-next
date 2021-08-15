@@ -6,8 +6,23 @@ import styles from '../styles/nav.module.scss'
 export default function Nav() {
   const [menuOpen, setDropdown] = useState(false)
 
+  const listener = () => {
+
+  }
+
   return (
-    <section className={styles.navWrapper}>
+    <section className={styles.navWrapper} id='nav-wrapper'>
+      {/* { 
+        if (window) {
+          window.addEventListener('scroll', () => {
+            if (menuOpen) {
+              const mobLinks = document.querySelector('#mobile-nav-links')
+              const nav = document.querySelector('#nav-wrapper')
+              console.log(nav)
+            }
+          }, {passive: true})}
+        }
+      } */}
       <nav className={styles.nav}>
         <button className={styles.financeButton}>Finance</button>
         <button 
@@ -43,7 +58,13 @@ export default function Nav() {
         </section>
         <section className={styles.emptyNavDiv}></section>
       </nav>
-      <section style={{ visibility: menuOpen ? 'visible' : 'hidden' }} className={styles.navLinksMob}>
+      <section 
+        className={styles.navLinksMob}
+        style={{ 
+          visibility: menuOpen ? 'visible' : 'hidden', 
+          top: document ? document.querySelector('#nav-wrapper').getBoundingClientRect().bottom : auto, 
+        }} 
+      >
         <Link href="/"><a>Home</a></Link>
         <Link href="/about/"><a>About</a></Link>
         <Link href="/"><a>Blog</a></Link>
