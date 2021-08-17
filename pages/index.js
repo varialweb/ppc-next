@@ -15,167 +15,131 @@ export default function Home() {
         <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-720w.webp" as="image"/> */}
       </Head>
       <section className={styles.hero}>
-        <div className={styles.heroImgWrapper}>
-          <img
-            className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-v4-720w.webp"
-            width="720"
-            height="720"
-            alt="Two giant sunrooms on a mansion"
-          />
-          <img
-            className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-v4-720w.webp"
-            width="720"
-            height="720"
-            alt="Two giant sunrooms on a mansion"
-          />
-          <img
-            className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-v4-720w.webp"
-            width="720"
-            height="720"
-            alt="Two giant sunrooms on a mansion"
-          />
-          <img
-            className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-v4-720w.webp"
-            width="720"
-            height="568"
-            alt="Two giant sunrooms on a mansion"
-          />
-          <img
-            className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-v4-720w.webp"
-            width="720"
-            height="568"
-            alt="Two giant sunrooms on a mansion"
-          />
-          <img
-            className={styles.heroImg}
-            src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-720w.webp"
-            width="720"
-            height="568"
-            alt="Two giant sunrooms on a mansion"
-          />
-        </div>
         <div className={styles.heroImgWrapperPc}>
           <picture>
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-3200w.webp" media="(min-width: 3200px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-2732w.webp" media="(min-width: 2732px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-2560w.webp" media="(min-width: 2560px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-1920w.webp" media="(min-width: 1920px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-3200w.webp" media="(min-width: 3200px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-2732w.webp" media="(min-width: 2732px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-2560w.webp" media="(min-width: 2560px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-1920w.webp" media="(min-width: 1920px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-pc-1280w.webp" media="(min-width: 1280px)" />
             <img 
               className={styles.heroImgPc}
-              src="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-1-pc-1280w.webp"
+              src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-v4-720w.webp"
+              width="360"
+              height="360"
+            />
+          </picture>
+          <picture>
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-3840w.webp" media="(min-width: 3840px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-3200w.webp" media="(min-width: 3200px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-2732w.webp" media="(min-width: 2732px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-2560w.webp" media="(min-width: 2560px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-1920w.webp" media="(min-width: 1920px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-pc-1280w.webp" media="(min-width: 1280px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-v5-1080w.webp" media="(-webkit-min-device-pixel-ratio: 3" />
+            <img 
+              className={styles.heroImgPc}
+              src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-v5-720w.webp"
+              width="360"
+              height="360"
+            />
+          </picture>
+          <picture>
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-3840w.webp" media="(min-width: 3840px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-3200w.webp" media="(min-width: 3200px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-2732w.webp" media="(min-width: 2732px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-2560w.webp" media="(min-width: 2560px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-1920w.webp" media="(min-width: 1920px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-pc-1280w.webp" media="(min-width: 1280px)" />
+            <img 
+              className={styles.heroImgPc}
+              src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-v4-720w.webp"
+              width="360"
+              height="360"
+            />
+          </picture>
+          <picture>
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-3840w.webp" media="(min-width: 3840px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-3200w.webp" media="(min-width: 3200px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-2732w.webp" media="(min-width: 2732px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-2560w.webp" media="(min-width: 2560px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-1920w.webp" media="(min-width: 1920px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-pc-1280w.webp" media="(min-width: 1280px)" />
+            <img 
+              className={styles.heroImgPc}
+              src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-v4-720w.webp"
+              width="360"
+              height="360"
+            />
+          </picture>
+          <picture>
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-3840w.webp" media="(min-width: 3840px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-3200w.webp" media="(min-width: 3200px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-2732w.webp" media="(min-width: 2732px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-2560w.webp" media="(min-width: 2560px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-1920w.webp" media="(min-width: 1920px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-pc-1280w.webp" media="(min-width: 1280px)" />
+            <img 
+              className={styles.heroImgPc}
+              src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-v4-720w.webp"
               width="1280"
               height="507"
             />
           </picture>
           <picture>
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-3840w.webp" media="(min-width: 3840px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-3200w.webp" media="(min-width: 3200px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-2732w.webp" media="(min-width: 2732px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-2560w.webp" media="(min-width: 2560px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-1920w.webp" media="(min-width: 1920px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-3840w.webp" media="(min-width: 3840px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-3200w.webp" media="(min-width: 3200px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-2732w.webp" media="(min-width: 2732px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-2560w.webp" media="(min-width: 2560px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-1920w.webp" media="(min-width: 1920px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-pc-1280.webp" media="(min-width: 1280px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-1080w.webp" media="(-webkit-min-device-pixel-ratio: 3" />
             <img 
               className={styles.heroImgPc}
-              src="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-2-pc-1280w.webp"
-              width="1280"
-              height="507"
-            />
-          </picture>
-          <picture>
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-3840w.webp" media="(min-width: 3840px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-3200w.webp" media="(min-width: 3200px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-2732w.webp" media="(min-width: 2732px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-2560w.webp" media="(min-width: 2560px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-1920w.webp" media="(min-width: 1920px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-1366w.webp" media="(min-width: 1366px)" />
-            <img 
-              className={styles.heroImgPc}
-              src="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-3-pc-1280w.webp"
-              width="1280"
-              height="507"
-            />
-          </picture>
-          <picture>
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-3840w.webp" media="(min-width: 3840px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-3200w.webp" media="(min-width: 3200px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-2732w.webp" media="(min-width: 2732px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-2560w.webp" media="(min-width: 2560px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-1920w.webp" media="(min-width: 1920px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-1366w.webp" media="(min-width: 1366px)" />
-            <img 
-              className={styles.heroImgPc}
-              src="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-4-pc-1280w.webp"
-              width="1280"
-              height="507"
-            />
-          </picture>
-          <picture>
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-3840w.webp" media="(min-width: 3840px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-3200w.webp" media="(min-width: 3200px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-2732w.webp" media="(min-width: 2732px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-2560w.webp" media="(min-width: 2560px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-1920w.webp" media="(min-width: 1920px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-1366w.webp" media="(min-width: 1366px)" />
-            <img 
-              className={styles.heroImgPc}
-              src="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-5-pc-1280w.webp"
-              width="1280"
-              height="507"
-            />
-          </picture>
-          <picture>
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-3840w.webp" media="(min-width: 3840px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-3200w.webp" media="(min-width: 3200px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-2732w.webp" media="(min-width: 2732px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-2560w.webp" media="(min-width: 2560px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-1920w.webp" media="(min-width: 1920px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-1600w.webp" media="(min-width: 1600px)" />
-            <source srcSet="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-1366w.webp" media="(min-width: 1366px)" />
-            <img 
-              className={styles.heroImgPc}
-              src="https://precisionpatios.s3.us-west-2.amazonaws.com/slide-img-6-pc-1280w.webp"
-              width="1280"
-              height="507"
+              src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-720w.webp"
+              width={"360"}
+              height={"360"}
             />
           </picture>
         </div>
