@@ -145,6 +145,7 @@ export default function Home() {
               src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-6-720w.webp"
               width={"360"}
               height={"360"}
+              alt=""
             />
           </picture>
         </div>
