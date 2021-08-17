@@ -33,6 +33,7 @@ export default function Home() {
               src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-v4-720w.webp"
               width="360"
               height="360"
+              alt=""
             />
           </picture>
           <picture>
@@ -55,6 +56,7 @@ export default function Home() {
               src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-v5-720w.webp"
               width="360"
               height="360"
+              alt=""
             />
           </picture>
           <picture>
@@ -76,6 +78,7 @@ export default function Home() {
               src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-v4-720w.webp"
               width="360"
               height="360"
+              alt=""
             />
           </picture>
           <picture>
@@ -97,6 +100,7 @@ export default function Home() {
               src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-v4-720w.webp"
               width="360"
               height="360"
+              alt=""
             />
           </picture>
           <picture>
@@ -116,8 +120,9 @@ export default function Home() {
             <img 
               className={styles.heroImgPc}
               src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-5-v4-720w.webp"
-              width="1280"
-              height="507"
+              width="360"
+              height="360"
+              alt=""
             />
           </picture>
           <picture>
@@ -159,14 +164,7 @@ export default function Home() {
           We are your certified Four Seasons Sunroom Dealer & Outdoor Living Specialists.
         </p>
         <section className={styles.cards}>
-          <h2 className='h2-margin-top' onClick={() => {
-            if (window) {
-              console.log(window.innerHeight)
-              console.log(window.outerHeight)
-            } else {
-              console.log('no window')
-            }
-          }}>Our Products</h2>
+          <h2 className='h2-margin-top'>Our Products</h2>
           <Card 
             title="Sunrooms"
             snip="
