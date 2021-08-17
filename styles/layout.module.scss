@@ -2,6 +2,13 @@
   display: grid;
   padding-block: 1.7335rem;
   place-content: center;
+
+  @media (min-width: 769px) {
+    padding-block-start: 0px;
+    // padding-block: 0.86675rem;
+    padding-block-start: 0.5778333333rem;
+    padding-block-end: 1.155667rem;
+  }
 }
 
 .headerImage {
@@ -10,6 +17,9 @@
   width: auto;
 
   @media (min-width: 769px) {
-      width: 10vw;
+      // width: 10vw;
+      // height: 4.28825rem;
+      // height: 3rem;
+      height: 3.5rem;
   }
 }

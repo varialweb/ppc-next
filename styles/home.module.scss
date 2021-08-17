@@ -5,16 +5,40 @@
 
 .heroImgWrapper {
   display: grid;
-  grid-template-columns: repeat(5, 100vw);
 
   @media (min-width: 769px) {
     display: none;
   }
 }
 
-.heroImg {
+.heroImgWrapperPc {
+  display: none;
+
+  @media (min-width: 769px) {
+    display: grid;
+  }
+}
+
+.heroImgWrapper, .heroImgWrapperPc {
+  grid-template-columns: repeat(6, 100vw);
+}
+
+// .heroImgWrapperPc {
+//   picture {
+//     position: relative;
+//     animation-duration: 48s;
+//     animation-iteration-count: infinite;
+//     opacity: 1;
+
+//     &:nth-child(1) {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+.heroImg, .heroImgWrapperPc picture {
   position: relative;
-  animation-duration: 30s;
+  animation-duration: 48s;
   animation-iteration-count: infinite;
   opacity: 0;
 
@@ -43,6 +67,11 @@
     animation-name: heroImg5;
   }
 
+  &:nth-child(6) {
+    left: -500%;
+    animation-name: heroImg6;
+  }
+
 
   @media (min-width: 769px) {
     // display: none!important;
@@ -53,10 +82,10 @@
   0% {
     opacity: 1;
   }
-  20% {
+  16.67% {
     opacity: 0;
   }
-  80% {
+  83.33% {
     opacity: 0;
   }
   100% {
@@ -68,43 +97,55 @@
   0% {
     opacity: 0;
   }
-  20% {
+  16.67% {
     opacity: 1;
   }
-  40% {
+  33.33% {
     opacity: 0;
   }
 }
 
 @keyframes heroImg3 {
-  20% {
+  16.67% {
     opacity: 0;
   }
-  40% {
+  33.33% {
     opacity: 1;
   }
-  60% {
+  50% {
     opacity: 0;
   }
 }
 
 @keyframes heroImg4 {
-  40% {
+  33.33% {
     opacity: 0;
   }
-  60% {
+  50% {
     opacity: 1;
   }
-  80% {
+  66.67% {
     opacity: 0;
   }
 }
 
 @keyframes heroImg5 {
-  60% {
+  50% {
     opacity: 0;
   }
-  80% {
+  66.67% {
+    opacity: 1;
+  }
+  83.33% {
+    opacity: 0;
+  }
+}
+
+@keyframes heroImg6 {
+  66.67% {
+    opacity: 0;
+  }
+  83.33% {
     opacity: 1;
   }
   100% {
@@ -112,13 +153,13 @@
   }
 }
 
-.heroImgPc {
-  display: none;
+// .heroImgPc {
+//   display: none;
 
-  @media (min-width: 769px) {
-    display: block;
-  }
-}
+//   @media (min-width: 769px) {
+//     display: block;
+//   }
+// }
 
 .main {
   padding-block: 2rem;

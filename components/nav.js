@@ -12,8 +12,37 @@ export default function Nav() {
         const mobNavLinks = document.querySelector('#nav-links-mob')
 
         mobNavLinks.style.top = nav.getBoundingClientRect().bottom + 'px'
+
       }
     }
+
+    if (document) {
+      const line1 = document.querySelector('.hamburgerLine1')
+      const line2 = document.querySelector('.hamburgerLine2')
+
+      if (menuOpen) {
+        line1.setAttribute('y1', '1')
+        line1.setAttribute('y2', '24')
+        line1.setAttribute('x1', '12')
+        line1.setAttribute('x2', '36')
+        line2.setAttribute('y1', '24')
+        line2.setAttribute('y2', '1')
+        line2.setAttribute('x1', '12')
+        line2.setAttribute('x2', '36')
+      } 
+      if (!menuOpen) {
+        line1.setAttribute('y1', '8')
+        line1.setAttribute('y2', '8')
+        line1.setAttribute('x1', '0')
+        line1.setAttribute('x2', '36')
+        line2.setAttribute('y1', '20')
+        line2.setAttribute('y2', '20')
+        line2.setAttribute('x1', '0')
+        line2.setAttribute('x2', '36')
+      }
+    }
+
+    
   })
 
   return (
@@ -23,10 +52,11 @@ export default function Nav() {
         <button 
           className={styles.hamburgerButton} 
           aria-label="dropdown menu"
-          onClick={() => {
+          // style={{ background: '#00f'}}
+          onClick={async () => {
             setDropdown(!menuOpen)
           }}>
-          <svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          {/* <svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="Home---Mobile" transform="translate(-258.000000, -22.000000)" fill="#000000" fillRule="nonzero">
                 <g id="menu_black_48dp" transform="translate(252.000000, 10.000000)">
@@ -34,6 +64,11 @@ export default function Nav() {
                 </g>
               </g>
             </g>
+          </svg> */}
+          <svg width="36px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <title>Dropdown Menu</title>
+            <line className='hamburgerLine1' x1="0" y1="8" x2="36" y2="8" stroke="#000" strokeWidth="2"/>
+            <line className='hamburgerLine2' x1="0" y1="20" x2="36" y2="20" stroke="#000" strokeWidth="2"/>
           </svg>
         </button>
         <section className={styles.navLinks}>
