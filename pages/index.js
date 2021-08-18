@@ -173,7 +173,7 @@ export default function Home() {
               It is the perfect home improvement that ties into your house seamlessly 
               in the most luxurious way."
             img={{
-              src: 'https://d35tzt7i3ppzs4.cloudfront.net/sunroom1-608w.webp',
+              src: 'sunroom-slide-1',
               alt: ''
             }}
           />
