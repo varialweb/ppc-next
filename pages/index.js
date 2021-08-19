@@ -174,7 +174,7 @@ export default function Home() {
               in the most luxurious way."
             img={{
               src: 'sunroom-slide-1',
-              alt: ''
+              alt: '',
             }}
           />
           <Card 
@@ -184,7 +184,7 @@ export default function Home() {
               Having us as your certified installers with the Four Seasons Sunrooms family 
               provides you access to this fantastic home improvement."
             img={{
-              src: 'https://d35tzt7i3ppzs4.cloudfront.net/liferoom1-608w.webp',
+              src: 'liferoom-slide-1',
               alt: ''
             }}
           />
@@ -194,7 +194,7 @@ export default function Home() {
               The south sound receives a lot of moisture, which limits your patio enjoyment. 
               We have the perfect solution for you."
             img={{
-              src: 'https://d35tzt7i3ppzs4.cloudfront.net/cover1-608w.webp',
+              src: 'cover-slide-1',
               alt: ''
             }}
           />
@@ -205,7 +205,7 @@ export default function Home() {
               Turn your space into an area that is customized to your color preference and 
               matches your home."
             img={{
-              src: 'https://d35tzt7i3ppzs4.cloudfront.net/deck1-608w.webp',
+              src: 'deck-slide-1',
               alt: ''
             }}
           />
@@ -215,7 +215,7 @@ export default function Home() {
               One way to really enhance your outdoor living and patio space is to have remote 
               controlled power screens on every side of your patio cover."
             img={{
-              src: 'https://d35tzt7i3ppzs4.cloudfront.net/screen-1-608w.webp',
+              src: 'screen-slide-1',
               alt: ''
             }}
           />
@@ -225,7 +225,7 @@ export default function Home() {
               We install the highest quality hand railing systems available. 
               You can highly customize your design to match your desired style."
             img={{
-              src: 'https://d35tzt7i3ppzs4.cloudfront.net/handrail-1-608w.webp',
+              src: 'handrail-slide-1',
               alt: ''
             }}
           />
@@ -236,7 +236,7 @@ export default function Home() {
               A retractable awning may be an appropriate way for you to achieve the rain protection
               and sun shade that you need, when you need it."
             img={{
-              src: 'https://d35tzt7i3ppzs4.cloudfront.net/awning-1-607w.webp',
+              src: 'awning-slide-1',
               alt: ''
             }}
           />

@@ -12,9 +12,23 @@ export default function Nav() {
         const mobNavLinks = document.querySelector('#nav-links-mob')
 
         mobNavLinks.style.top = nav.getBoundingClientRect().bottom + 'px'
-
       }
     }
+
+    if (window) {
+      window.addEventListener('scroll', () => {
+        console.log('test')
+
+        if (document) {
+          const nav = document.querySelector('#nav-wrapper')
+          if (window.scrollY > 0) {
+            nav.style.boxShadow = '0px 0.05rem 4px hsl(0 0% 0% / 0.5)'
+          } else {
+            nav.style.boxShadow = 'none'
+          }
+        }
+      }, { passive: true})
+    } 
 
     if (document) {
       const line1 = document.querySelector('.hamburgerLine1')
@@ -52,19 +66,9 @@ export default function Nav() {
         <button 
           className={styles.hamburgerButton} 
           aria-label="dropdown menu"
-          // style={{ background: '#00f'}}
           onClick={async () => {
             setDropdown(!menuOpen)
           }}>
-          {/* <svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-              <g id="Home---Mobile" transform="translate(-258.000000, -22.000000)" fill="#000000" fillRule="nonzero">
-                <g id="menu_black_48dp" transform="translate(252.000000, 10.000000)">
-                  <path d="M6,36 L42,36 L42,32 L6,32 L6,36 Z M6,26 L42,26 L42,22 L6,22 L6,26 Z M6,12 L6,16 L42,16 L42,12 L6,12 Z" id="Shape"></path>
-                </g>
-              </g>
-            </g>
-          </svg> */}
           <svg width="36px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <title>Dropdown Menu</title>
             <line className='hamburgerLine1' x1="0" y1="8" x2="36" y2="8" stroke="#000" strokeWidth="2"/>
@@ -86,7 +90,26 @@ export default function Nav() {
             <Link href="/"><a>Retractable Awnings</a></Link>
           </div>
         </section>
-        <section className={styles.emptyNavDiv}></section>
+        <section className={styles.socialLinks}>
+          <img 
+            src='https://d35tzt7i3ppzs4.cloudfront.net/facebook-icon.png' 
+            alt='Facebook' 
+            width='256'
+            height='256'
+          />
+          <img 
+            src='https://d35tzt7i3ppzs4.cloudfront.net/instagram-icon.png' 
+            alt='Instagram' 
+            width='256'
+            height='256'
+          />
+          <img 
+            src='https://d35tzt7i3ppzs4.cloudfront.net/linkedin-icon-v2.png' 
+            alt='LinkedIn' 
+            width='301'
+            height='256'
+          />
+        </section>
       </nav>
       <section 
         className={styles.navLinksMob}

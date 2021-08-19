@@ -24,7 +24,7 @@ export default function Footer() {
           height='256'
         />
         <img 
-          src='https://d35tzt7i3ppzs4.cloudfront.net/linkedin-icon.png' 
+          src='https://d35tzt7i3ppzs4.cloudfront.net/linkedin-icon-v2.png' 
           alt='LinkedIn' 
           width='301'
           height='256'

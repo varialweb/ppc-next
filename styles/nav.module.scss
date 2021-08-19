@@ -154,11 +154,19 @@
   }
 }
 
-.emptyNavDiv {
+.socialLinks {
   display: none;
   grid-area: empty;
 
   @media (min-width: 769px) {
-    display: block;
+    justify-content: end;
+    display: grid;
+    grid-template-columns: repeat(3, 0.9rem);
+    column-gap: 0.9rem;
+  }
+
+  img {
+    height: auto;
+    width: 0.9rem;
   }
 }
