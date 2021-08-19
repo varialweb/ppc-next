@@ -26,8 +26,8 @@ export default function Footer() {
         <img 
           src='https://d35tzt7i3ppzs4.cloudfront.net/linkedin-icon-v2.png' 
           alt='LinkedIn' 
-          width='301'
-          height='256'
+          width='255'
+          height='255'
         />
       </div>
       <div className={styles.footerProductLinks}>
