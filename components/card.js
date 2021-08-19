@@ -40,6 +40,22 @@ export default function Card({ title, snip, img}) {
           width='640'
           height='480'
           loading='lazy'
+          sizes="(min-width: 1601px) and (-webkit-min-device-pixel-ratio: 2) 1664px,
+          (min-width: 1367px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) 1386px,
+          (min-width: 1281px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) 1184px,
+          (min-width: 1025px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) 1110px,
+          (min-width: 769px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) 888px,
+          (min-width: 376px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) 1386px,
+          (max-width: 375px) and (-webkit-min-device-pixel-ratio: 2.1) 1184px,
+          (min-width: 2561px) 1664px,
+          (min-width: 1921px) and (max-width: 2560px) 1110px,
+          (min-width: 1601px) and (max-width: 1920px) 832px,
+          (min-width: 1367px) and (max-width: 1600px) 693px,
+          (min-width: 1281px) and (max-width: 1366px) 592px,
+          (min-width: 769px) and (max-width: 1280px) 555px,
+          (min-width: 376px) and (max-width: 768px) 888w,
+          (min-width: 321px) and (max-width: 375px) 750px,
+          100vw"
         />
         {/* <picture>
           <source srcSet={srcSet[10]} media="(min-width: 1601px) and (-webkit-min-device-pixel-ratio: 2)"/>
