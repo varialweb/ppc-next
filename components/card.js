@@ -37,6 +37,9 @@ export default function Card({ title, snip, img}) {
           src={mainImg}
           alt={img.alt}
           srcSet={srcSet}
+          width='640'
+          height='480'
+          loading='lazy'
         />
         {/* <picture>
           <source srcSet={srcSet[10]} media="(min-width: 1601px) and (-webkit-min-device-pixel-ratio: 2)"/>
