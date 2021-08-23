@@ -119,7 +119,7 @@ export default function AboutPage() {
               happy friends and customers we have met throughout the years.
             </p>
             <p>
-              Give us a call - We'd love to help you with your new home improvement project.
+              Give us a call - We&apos;d love to help you with your new home improvement project.
             </p>
           </article> 
         </section>

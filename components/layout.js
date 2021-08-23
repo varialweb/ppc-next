@@ -16,13 +16,15 @@ export default function Layout({ title, children }) {
       <Nav />
       <header className={styles.header}>
         <Link href="/">
-          <img
+          <a>
+            <img
               className={styles.headerImage}
               src="https://d35tzt7i3ppzs4.cloudfront.net/ppc-logo-322w.webp"
               width={322}
               height={288}
               alt="Precision Patio Covers"
-          />
+            />
+          </a>
         </Link>
       </header>
       {children}

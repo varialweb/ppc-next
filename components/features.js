@@ -27,7 +27,7 @@ export default function Features() {
     <h3>Sunshade & UV Protection</h3>
 
     <svg width="120px" height="120px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
+        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="About---PC" transform="translate(-1143.000000, -84.000000)" fillRule="nonzero">
                 <g id="clouded" transform="translate(1143.000000, 84.000000)">
                     <circle id="Oval" fill="#31BAFD" cx="256" cy="256" r="256"></circle>
