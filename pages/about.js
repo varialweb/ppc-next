@@ -13,27 +13,27 @@ export default function AboutPage() {
               <picture>
                 <source
                   media="(min-width: 769px) and (-webkit-min-device-pixel-ratio: 2)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/team-1358w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/team-1358w.webp" 
                 />
                 <source
                   media="(min-width: 1367px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/team-868w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/team-868w.webp" 
                 />
                 <source
                   media="(min-width: 769px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/team-640w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/team-640w.webp" 
                 />
                 <source
                   media="(min-width: 435px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/team-1358w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/team-1358w.webp" 
                 />
                 <source
                   media="(min-width: 376px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/team-868w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/team-868w.webp" 
                 />
                 <source
                   media="(min-width: 321px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/team-750w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/team-750w.webp" 
                 />
                 <img 
                   className={styles.teamImg}
@@ -66,35 +66,35 @@ export default function AboutPage() {
               <picture>
                 <source
                   media="(min-width: 1921px) and (-webkit-min-device-pixel-ratio: 2)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-1536w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-1536w.webp" 
                 />
                 <source
                   media="(min-width: 1367px) and (-webkit-min-device-pixel-ratio: 2)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-1200w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-1200w.webp" 
                 />
                 <source
                   media="(min-width: 769px) and (-webkit-min-device-pixel-ratio: 2)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-854w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-854w.webp" 
                 />
                 <source
                   media="(min-width: 769px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-640w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-640w.webp" 
                 />
                 <source
                   media="(min-width: 601px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-1536w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-1536w.webp" 
                 />
                 <source
                   media="(min-width: 428px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-1200w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-1200w.webp" 
                 />
                 <source
                   media="(min-width: 376px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-854w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-854w.webp" 
                 />
                 <source
                   media="(min-width: 321px)"
-                  srcset="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-750w.webp" 
+                  srcSet="https://d35tzt7i3ppzs4.cloudfront.net/ben-mahlia-750w.webp" 
                 />
                 <img
                   className={styles.benImg}
