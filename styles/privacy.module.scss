@@ -1,0 +1,47 @@
+.privacy {
+  padding-block: 3em;
+  padding-inline: 1em;
+
+  @media (min-width: 769px) {
+    width: 21.7em;
+    margin-inline: auto;
+    padding-block: 1.3em;
+  }
+
+  a {
+    color: #00f;
+  }
+
+  h1 {
+    @media (min-width: 769px) {
+      text-align: center;
+    }
+  }
+
+  h2 {
+    font-size: 1.4em;
+    margin-block-start: 2em;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  p {
+    margin-block-start: 0.5em;
+
+    @media (min-width: 769px) {
+      margin-block-start: 1em;
+    }
+  }
+
+  li {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+
+    &:first-child {
+      margin-block-end: 1em;
+    }
+  }
+}

@@ -14,9 +14,10 @@
 
   @media (min-width: 769px) {
     grid-template-areas: 
-      '. address .'
+      'address address address'
       'products social page'
-      '. copy .';
+      'copy copy copy';
+      grid-template-columns: repeat(3, 1fr);
     padding-inline: 4em;
     padding-block: 2rem;
     row-gap: 1em;
@@ -34,35 +35,45 @@
   }
 
   address {
+    // background: #0f0;
       font-style: normal;
       grid-area: address;
       text-align: center;
       justify-self: center;
+      margin: 0;
+      padding: 0;
   }
 
   .footerSocialIcons {
+    // align-content: center;
     // background: #00f;
     display: flex;
     grid-area: social;
-    justify-content: center;
+    // place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
     // justify-self: center;
-    width: 100%;
+    // width: fit-content;
+    // width: 100%;
+    padding-inline: 2em;
 
     @media (min-width: 769px) {
       align-self: center;
+      padding: 0;
     }
 
     img {
       // width: 3em;
       height: 3em;
       width: auto;
-      margin-inline: 1.5em;
+      // margin-inline: auto;
     }
   }
 
   .footerProductLinks {
       display: grid;
       grid-area: products;
+      // justify-items: end;
   }
 
   .footerPageLinks {

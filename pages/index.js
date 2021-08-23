@@ -164,7 +164,7 @@ export default function Home() {
           Whether you are a homeowner or a business owner, we can help you dramatically improve your outdoor living for you or your customers.
           We are your certified Four Seasons Sunroom Dealer & Outdoor Living Specialists.
         </p>
-        <section className={styles.cards}>
+        <section className={styles.cards} id="products">
           <h2 className='h2-margin-top'>Our Products</h2>
           <Card 
             title="Sunrooms"

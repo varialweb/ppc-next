@@ -7,6 +7,9 @@
 
   h3 {
       margin-block-start: 2.6em;
+      margin-inline: auto;
+      max-width: 15ch;
+    //   height: min-content;
 
       @media (min-width: 769px) {
           font-size: 0.7rem;
@@ -15,11 +18,14 @@
 
   div {
       display: grid;
+    //   grid-template-rows: auto 1fr;
+      min-height: 13rem;
   }
 
   svg, img {
       margin-block-start: 1em;
       justify-self: center;
+    //   align-self: start;
 
       @media (min-width: 769px) {
           height: 5em;
@@ -39,6 +45,7 @@
   }
 
   .icons {
+    //   margin-block: 0;
       @media (min-width: 769px) {
           display: grid;
           grid-template-columns: repeat(5, 1fr);
@@ -47,6 +54,7 @@
           h3 {
               // margin: 0 auto;
               margin-inline: auto;
+            //   margin-block: 0;
               // max-width: 20ch;
           }
       }

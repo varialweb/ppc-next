@@ -62,7 +62,10 @@ export default function Nav() {
   return (
     <section className={styles.navWrapper} id='nav-wrapper'>
       <nav className={styles.nav}>
-        <button className={styles.financeButton}>Finance</button>
+        <div>
+        {/* <button className={styles.financeButton}>Finance</button> */}
+        <a href="https://app.gethearth.com/financing/15262/19517/prequalify?utm_campaign=15262&utm_content=general&utm_medium=custom-lp&utm_source=contractor&utm_term=19517" className={styles.finance}>Finance</a>
+        </div>
         <button 
           className={styles.hamburgerButton} 
           aria-label="dropdown menu"
@@ -76,39 +79,48 @@ export default function Nav() {
           </svg>
         </button>
         <section className={styles.navLinks}>
+          <div>
           <Link href="/"><a>Home</a></Link>
           <Link href="/about/"><a>About</a></Link>
-          <Link href="/"><a>Blog</a></Link>
-          <Link href="/"><a>Contact</a></Link>
-          <button>Products</button>
-          <div className={styles.products}>
+          <Link href="/blog/"><a>Blog</a></Link>
+          <Link href="/contact/"><a>Contact</a></Link>
+          <Link href="/#products"><a>Products</a></Link>
+          </div>
+          {/* <button>Products</button> */}
+          {/* <div className={styles.products}>
             <Link href="/"><a>Sunrooms</a></Link>
             <Link href="/"><a>Liferooms</a></Link>
             <Link href="/"><a>Patio Covers</a></Link>
             <Link href="/"><a>Decks</a></Link>
             <Link href="/"><a>Handrails</a></Link>
             <Link href="/"><a>Retractable Awnings</a></Link>
-          </div>
+          </div> */}
         </section>
         <section className={styles.socialLinks}>
-          <img 
-            src='https://d35tzt7i3ppzs4.cloudfront.net/facebook-icon.png' 
-            alt='Facebook' 
-            width='256'
-            height='256'
-          />
-          <img 
-            src='https://d35tzt7i3ppzs4.cloudfront.net/instagram-icon.png' 
-            alt='Instagram' 
-            width='256'
-            height='256'
-          />
-          <img 
-            src='https://d35tzt7i3ppzs4.cloudfront.net/linkedin-icon-v2.png' 
-            alt='LinkedIn' 
-            width='255'
-            height='255'
-          />
+          <a href="https://www.facebook.com/PrecisionPatioCoversLLC/">
+            <img 
+              src='https://d35tzt7i3ppzs4.cloudfront.net/facebook-icon.png' 
+              alt='Facebook' 
+              width='256'
+              height='256'
+            />
+          </a>
+          <a href="https://www.instagram.com/precision_patio_covers/">
+            <img 
+              src='https://d35tzt7i3ppzs4.cloudfront.net/instagram-icon.png' 
+              alt='Instagram' 
+              width='256'
+              height='256'
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/precision-patio-covers-054a77183/">
+            <img 
+              src='https://d35tzt7i3ppzs4.cloudfront.net/linkedin-icon-v2.png' 
+              alt='LinkedIn' 
+              width='255'
+              height='255'
+            />
+          </a>
         </section>
       </nav>
       <section 
@@ -118,16 +130,16 @@ export default function Nav() {
       >
         <Link href="/"><a>Home</a></Link>
         <Link href="/about/"><a>About</a></Link>
-        <Link href="/"><a>Blog</a></Link>
-        <Link href="/"><a>Contact</a></Link>
+        <Link href="/blog/"><a>Blog</a></Link>
+        <Link href="/contact/"><a>Contact</a></Link>
         <button>Products</button>
         <div className={styles.productsMob}>
-          <Link href="/"><a>Sunrooms</a></Link>
-          <Link href="/"><a>Liferooms</a></Link>
-          <Link href="/"><a>Patio Covers</a></Link>
-          <Link href="/"><a>Decks</a></Link>
-          <Link href="/"><a>Handrails</a></Link>
-          <Link href="/"><a>Retractable Awnings</a></Link>
+          <Link href="/sunrooms/"><a>Sunrooms</a></Link>
+          <Link href="/liferooms/"><a>Liferooms</a></Link>
+          <Link href="/covers/"><a>Patio Covers</a></Link>
+          <Link href="/decks/"><a>Decks</a></Link>
+          <Link href="/handrails/"><a>Handrails</a></Link>
+          <Link href="/awnings/"><a>Retractable Awnings</a></Link>
         </div>
       </section>
     </section>
