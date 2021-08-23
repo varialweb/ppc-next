@@ -64,6 +64,12 @@
   grid-area: finance;
   padding: 0.4em 1em;
   // width: fit-content;
+  // height: fit-content;
+
+  @media (min-width: 769px) {
+    font-size: 32px;
+    padding: 0.2em 1em;
+  }
 }
 
 .hamburgerButton {
