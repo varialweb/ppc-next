@@ -13,6 +13,45 @@
   justify-items: center;
   width: 100vw;
 
+  @media (min-width: 769px) {
+    box-shadow: none;
+    grid-template-areas:
+        'content img'
+        'content img'
+        'content img';
+    grid-template-columns: 50vw 50vw;
+    padding-block: 1.825em;
+    margin-block: 0;
+
+    &:nth-child(odd) {
+        background: none;
+        grid-template-areas:
+        'img content'
+        'img content'
+        'img content';
+    }
+  }
+
+  &:nth-child(odd) {
+      background: none;
+  }
+
+  .contentWrapper {
+    text-align: center;
+
+    @media (min-width: 769px) {
+    align-content: center;
+    display: flex;
+    grid-area: content;
+    flex-direction: column;
+    justify-content: space-evenly;
+    // justify-self: end;
+    // background: #00f;
+    text-align: center;
+    // height: inherit;
+    }
+  }
+
   h3 {
       font-size: 1.4rem;
       font-weight: 400;
@@ -26,44 +65,46 @@
   }
 
   .imgsWrapper {
-    width: fit-content;
-    height: fit-content;
+    background: #00f;
+    // width: fit-content;
+    // height: fit-content;
     display: grid;
-    // grid-template-columns: repeat(2, 20.8em);
     grid-template-columns: repeat(2, 100%);
 
     div {
+      // background: #00f;
       box-shadow: inset 0px 2px 6px 1px hsl(0 0% 0% / 0.5), inset 0px -2px 6px 1px hsl(0 0% 0% / 0.1);
       position: relative;
       z-index: 2;
       width: 100%;
-      height: 12rem;
+      // height: 12rem;
 
       @media (min-width: 769px) {
-        height: fit-content;
-        // height: 100px;
-        // height: 12rem;
-        height: 15.6em;
         border-radius: 4px;
       }
     }
 
     img {
-      width: 100%;
+      width: 100vw;
       height: auto;
       position: relative;
       left: -100%;
       z-index: 1;
+      display: block;
 
       @media (min-width: 769px) {
         border-radius: 4px;
+        width: 100%;
       }
     }
 
     @media (min-width: 769px) {
         grid-area: img;
-        width: 20.8em;
+        // width: 20.8em;
+        // width: 80%;
+        width: 30em;
         height: fit-content;
+        border-radius: 4px;
         // place-items: center;
     }
   }
@@ -97,28 +138,5 @@
           grid-area: button;
           margin-block: 0.8rem;
       }
-  }
-
-  @media (min-width: 769px) {
-      box-shadow: none;
-      grid-template-areas:
-          'title img'
-          'snip img'
-          'button img';
-      grid-template-columns: 50vw 50vw;
-      padding-block: 1.825em;
-      margin-block: 0;
-
-      &:nth-child(odd) {
-          background: none;
-          grid-template-areas:
-          'img title'
-          'img snip'
-          'img button';
-      }
-  }
-
-  &:nth-child(odd) {
-      background: none;
   }
 }

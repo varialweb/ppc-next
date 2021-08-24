@@ -5,59 +5,25 @@ import styles from '../styles/card.module.scss'
 export default function Card({ title, snip, img}) {
   const link = `/${title.toLowerCase()}/`
   const mainImg = `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-640w.webp`
-  const srcSet = `
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-640w.webp 640w,
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-750w.webp 750w, 
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-888w.webp 888w, 
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-555w.webp 555w,
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1110w.webp 1110w,
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-592w.webp 592w,
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1184w.webp 1184w,
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-693w.webp 693w,
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1386w.webp 1386w,
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-832w.webp 832w,
-    https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1664w.webp 1664w`
+  const srcSet = [
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-640w.webp`, // 320px mob x 2 [0]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-750w.webp`, // 375px mob x 2 [1]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-888w.webp`, // 1024px tab x 2 [2]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-555w.webp`, // 1280px pc x 1 [3]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1110w.webp`, // 1280px pc x 2 [4]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-592w.webp`, // 1366px pc x 1 [5]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1184w.webp`, // 1366px pc x 2 [6]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-693w.webp`, // 1600px pc x 1 [7]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1386w.webp`, // 1600px pc x 2 [8]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-832w.webp`, // 1920px pc x 1 [9]
+    `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1664w.webp`, // 1920px pc x 2 [10]
+  ]
 
-  // https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-640w.webp 640w, // 320px mob x 2 [0]
-  //   https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-750w.webp 750w, // 375px mob x 2 [1]
-  //   https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-888w.webp 888w, // 1024px tab x 2 [2]
-  //   `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-555w.webp`, // 1280px pc x 1 [3]
-  //   `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1110w.webp`, // 1280px pc x 2 [4]
-  //   `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-592w.webp`, // 1366px pc x 1 [5]
-  //   `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1184w.webp`, // 1366px pc x 2 [6]
-  //   `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-693w.webp`, // 1600px pc x 1 [7]
-  //   `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1386w.webp`, // 1600px pc x 2 [8]
-  //   `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-832w.webp`, // 1920px pc x 1 [9]
-  //   `https://d35tzt7i3ppzs4.cloudfront.net/${img.src}-1664w.webp`, // 1920px pc x 2 [10]
   return (
     <article className={styles.card}>
       <div className={styles.imgsWrapper}>
         <div></div>
-        <img 
-          src={mainImg}
-          alt={img.alt}
-          srcSet={srcSet}
-          width='640'
-          height='480'
-          loading='lazy'
-          sizes="(min-width: 1601px) and (-webkit-min-device-pixel-ratio: 2) 1664px,
-          (min-width: 1367px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) 1386px,
-          (min-width: 1281px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) 1184px,
-          (min-width: 1025px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 2) 1110px,
-          (min-width: 769px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) 888px,
-          (min-width: 376px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) 1386px,
-          (max-width: 375px) and (-webkit-min-device-pixel-ratio: 2.1) 1184px,
-          (min-width: 2561px) 1664px,
-          (min-width: 1921px) and (max-width: 2560px) 1110px,
-          (min-width: 1601px) and (max-width: 1920px) 832px,
-          (min-width: 1367px) and (max-width: 1600px) 693px,
-          (min-width: 1281px) and (max-width: 1366px) 592px,
-          (min-width: 769px) and (max-width: 1280px) 555px,
-          (min-width: 376px) and (max-width: 768px) 888w,
-          (min-width: 321px) and (max-width: 375px) 750px,
-          100vw"
-        />
-        {/* <picture>
+        <picture>
           <source srcSet={srcSet[10]} media="(min-width: 1601px) and (-webkit-min-device-pixel-ratio: 2)"/>
           <source srcSet={srcSet[8]} media="(min-width: 1367px) and (max-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)"/>
           <source srcSet={srcSet[6]} media="(min-width: 1281px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)"/>
@@ -81,13 +47,16 @@ export default function Card({ title, snip, img}) {
             height={480}
             loading='eager'
           />
-        </picture> */}
+        </picture>
       </div>
-      <h3>{title}</h3>
-      <p className={styles.snip}>{snip}</p>
-      <Link href={link}>
-        <a><button>View More</button></a>
-      </Link>
+      <div className={styles.contentWrapper}>
+        <h3>{title}</h3>
+        <p className={styles.snip}>{snip}</p>
+        <Link href={link}>
+          <a><button>View More</button></a>
+        </Link>
+      </div>
+      
     </article>
   )
 }

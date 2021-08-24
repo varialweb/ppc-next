@@ -10,8 +10,15 @@ export default function Nav() {
       if (document) {
         const nav = document.querySelector('#nav-wrapper')
         const mobNavLinks = document.querySelector('#nav-links-mob')
+        const navLinks = document.querySelector('#nav-links-pc')
+        const productLinksPc = document.querySelector('#products-pc')
+        const productsButtonPc = document.querySelector('#products-button-pc')
 
         mobNavLinks.style.top = nav.getBoundingClientRect().bottom + 'px'
+        productLinksPc.style.top = nav.getBoundingClientRect().bottom + 'px'
+        // productLinksPc.style.right = (navLinks.getBoundingClientRect().width - productLinksPc.width)+ 'px'
+        productLinksPc.style.transform = 'translateX(' + (navLinks.getBoundingClientRect().width - productLinksPc.getBoundingClientRect().width) + 'px)'
+        // productLinksPc.style.right = '800px'
       }
     }
 
@@ -62,7 +69,7 @@ export default function Nav() {
   return (
     <section className={styles.navWrapper} id='nav-wrapper'>
       <nav className={styles.nav}>
-        <div>
+        <div className={styles.financingSection}>
         {/* <button className={styles.financeButton}>Finance</button> */}
         <a href="https://app.gethearth.com/financing/15262/19517/prequalify?utm_campaign=15262&utm_content=general&utm_medium=custom-lp&utm_source=contractor&utm_term=19517" className={styles.finance}>Finance</a>
         </div>
@@ -78,13 +85,31 @@ export default function Nav() {
             <line className='hamburgerLine2' x1="0" y1="20" x2="36" y2="20" stroke="#000" strokeWidth="2"/>
           </svg>
         </button>
-        <section className={styles.navLinks}>
+        <section id="nav-links-pc" className={styles.navLinks}>
           <div>
-          <Link href="/"><a>Home</a></Link>
-          <Link href="/about/"><a>About</a></Link>
-          <Link href="/blog/"><a>Blog</a></Link>
-          <Link href="/contact/"><a>Contact</a></Link>
-          <Link href="/#products"><a>Products</a></Link>
+            <Link href="/"><a>Home</a></Link>
+            <Link href="/about/"><a>About</a></Link>
+            <Link href="/blog/"><a>Blog</a></Link>
+            <Link href="/contact/"><a>Contact</a></Link>
+            {/* <Link href="/#products"><a>Products</a></Link> */}
+            <button
+              id="products-button-pc"
+              aria-label="dropdown menu"
+              onClick={async () => {
+                setDropdown(!menuOpen)
+              }}
+            >
+              Products
+            </button>
+            <div id="products-pc" className={styles.productsPc} style={{ visibility: menuOpen ? 'visible' : 'hidden' }}>
+              <Link href="/sunrooms/"><a>Sunrooms</a></Link>
+              <Link href="/liferooms/"><a>Liferooms</a></Link>
+              <Link href="/covers/"><a>Patio Covers</a></Link>
+              <Link href="/decks/"><a>Decks</a></Link>
+              <Link href="/handrails/"><a>Handrails</a></Link>
+              <Link href="/awnings/"><a>Retractable Awnings</a></Link>
+            </div>
+            
           </div>
           {/* <button>Products</button> */}
           {/* <div className={styles.products}>

@@ -1,5 +1,6 @@
-import Layout from "../components/layout";
 const contentful = require('contentful')
+import Layout from '../components/layout'
+import styles from '../styles/blog.module.scss'
 
 export async function getServerSideProps() {
   const client = contentful.createClient({
@@ -19,20 +20,32 @@ export async function getServerSideProps() {
       const fields = post.fields
       const title = fields.title
       const slug = fields.slug
+      const date = post.sys.createdAt
+      const mainImage = {
+        url: 'https:' + fields.mainImage.fields.file.url,
+        alt: fields.mainImage.fields.description,
+        width: fields.mainImage.fields.file.details.image.width,
+        height: fields.mainImage.fields.file.details.image.height,
+      }
       const author = {
         name: fields.author.fields.name,
         img: {
-          url: fields.author.fields.picture.fields.file.url,
+          url: 'https:' + fields.author.fields.picture.fields.file.url,
           alt: fields.author.fields.picture.fields.description,
           width: fields.author.fields.picture.fields.file.details.image.width,
           height: fields.author.fields.picture.fields.file.details.image.height,
         }
       }
 
+      // console.log(post.sys.updatedAt)
+
+      // console.log(fields.mainImage.fields.description)
+      // console.log(fields.author.fields.picture.fields.file.url)
+
       let body = []
 
       fields.postBody.content.map(entry => {
-        console.log(entry)
+        // console.log(entry)
         switch (entry.nodeType) {
           case 'heading-1':
             body.push({ h1: entry.content[0].value})
@@ -43,7 +56,7 @@ export async function getServerSideProps() {
           case 'paragraph':
             let para = []
             entry.content.map(node => {
-              console.log('paraNode', node)
+              // console.log('paraNode', node)
               switch (node.nodeType) {
                 case 'text':
                   if (node.value !== '')
@@ -69,7 +82,9 @@ export async function getServerSideProps() {
       formattedPosts.push({
         title: title,
         slug: slug,
+        date: date,
         author: author,
+        mainImage: mainImage,
         body: body,
       })
 
@@ -90,38 +105,57 @@ export async function getServerSideProps() {
 export default function BlogPage({ posts }) {
   return (
     <Layout>
-      {
-        posts.map(post => {
-          let snip = ''
-          return (
-            <article key={post.title}>
-              <h2>{post.title}</h2>
-              {
-                post.body.map(entry => {  
-                  if (entry.p && snip.length === 0) {
-                    entry.p.map(para => {
-                      if (para.text) {
-                        console.log(para.text)
-                        snip = para.text
+      <main className={styles.blog}>
+        {
+          posts.map(post => {
+            let snip = ''
+            const date = new Date(post.date)
+            return (
+              <article key={post.title} className={styles.postCard}>
+                <div className={styles.imgWrapper}>
+                  <div className={styles.imgFilter}/>
+                  <img
+                    className={styles.mainImage} 
+                    src={post.mainImage.url} 
+                    alt={post.mainImage.alt} 
+                    width={post.mainImage.width} 
+                    height={post.mainImage.height}
+                  />
+                </div>
+                <div className={styles.content}>
+                  <h2>{post.title}</h2>
+                  {
+                    post.body.map(entry => {  
+                      if (entry.p && snip.length === 0) {
+                        entry.p.map(para => {
+                          if (para.text) {
+                            // console.log(para.text)
+                            snip = para.text
+                          }
+                        })
                       }
                     })
                   }
-                })
-              }
-              <p>{snip}</p>
-              <section>
-                <img 
-                  src={post.author.img.url} 
-                  alt={post.author.img.alt} 
-                  width={post.author.img.width}
-                  height={post.author.img.height}
-                />
-                <p>{post.author.name}</p>
-              </section>
-            </article>
-          )
-        })
-      }
+                  <p>{snip}</p>
+                  <section className={styles.authorSection}>
+                    <div className={styles.authorImgWrapper}>
+                      <div className={styles.authorFilter}/>
+                      <img 
+                        src={post.author.img.url} 
+                        alt={post.author.img.alt} 
+                        width={post.author.img.width}
+                        height={post.author.img.height}
+                      />
+                    </div>
+                    <p className={styles.author}>{post.author.name}</p>
+                    <p className={styles.date}>{date.toDateString()}</p>
+                  </section>
+                </div>
+              </article>
+            )
+          })
+        }
+      </main>
     </Layout>
   )
 }
