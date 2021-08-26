@@ -114,13 +114,15 @@ export default function BlogPage({ posts }) {
               <article key={post.title} className={styles.postCard}>
                 <div className={styles.imgWrapper}>
                   <div className={styles.imgFilter}/>
-                  <img
-                    className={styles.mainImage} 
-                    src={post.mainImage.url} 
-                    alt={post.mainImage.alt} 
-                    width={post.mainImage.width} 
-                    height={post.mainImage.height}
-                  />
+                  <picture>
+                    <img
+                      className={styles.mainImage} 
+                      src={post.mainImage.url} 
+                      alt={post.mainImage.alt} 
+                      width={post.mainImage.width} 
+                      height={post.mainImage.height}
+                    />
+                  </picture>
                 </div>
                 <div className={styles.content}>
                   <h2>{post.title}</h2>

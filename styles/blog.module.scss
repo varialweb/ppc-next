@@ -29,11 +29,21 @@
   .imgWrapper {
     display: grid;
     grid-template-columns: 100% 100%;
+    width: fit-content;
+    // position: relative;
+    // left: -100%;
 
     .imgFilter {
       background: hsl(200 100% 90% / 0.3);
+      box-shadow: inset 0px 2px 6px 1px hsl(0 0% 0% / 0.5);
+      border-radius: 4px;
       position: relative;
       z-index: 1;
+    }
+
+    picture {
+      position: relative;
+      left: -100%;
     }
 
     .mainImage {
@@ -43,8 +53,9 @@
       filter: brightness(120%);
       width: 14em;
       height: auto;
-      position: relative;
-      left: -100%;
+      display: block;
+      // position: relative;
+      // left: -100%;
 
       @media (min-width: 769px) {
         border-radius: 4px;
