@@ -68,7 +68,7 @@ export default function FAQPage() {
           <li>
             <h2>Does your company work through the winter?</h2>
             <p>
-              Yes, we work year round and don't stop progress.
+              Yes, we work year round and don&apos;t stop progress.
             </p>
           </li>
         </ul>
