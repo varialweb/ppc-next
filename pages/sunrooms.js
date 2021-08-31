@@ -10,20 +10,41 @@ export default function SunroomsPage() {
       <main className={styles.product}>
         <h1>Sunrooms</h1>
         <article>
-          <section className={styles.slideWrapper}>
+          <section id="slide-wrapper" className={styles.slideWrapper} onScroll={(event) => {
+            const wrapper = document.querySelector('#slide-wrapper')
+            console.log('scroll', wrapper.scrollLeft)
+            if (wrapper.scrollLeft % window.innerWidth === 0) {
+              console.log('match')
+              setCurrentImage((wrapper.scrollLeft / window.innerWidth) + 1)
+            }
+            if (wrapper.scrollLeft === 0) {
+              setCurrentImage(1)
+            }
+          }}>
             <div id="slide" className={styles.slide}>
               <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p1-1-653w.webp" width="4" height="3" alt=""></img>
               <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p2-1-653w.webp" width="4" height="3" alt=""></img>
               <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p3-1-653w.webp" width="4" height="3" alt=""></img>
             </div>
             <button className={styles.prevButton} onClick={() => {
-              const slide = document.querySelector('#slide')
+              // const slide = document.querySelector('#slide')
+              const wrapper = document.querySelector('#slide-wrapper')
               if (currentImage > 1) {
                 // slide.style.transform = `translateX(${(currentImage - totalImages) * 100}vw)`
-                slide.style.transform = `translateX(${-(currentImage - 2) * 100}vw)`
+                // slide.style.transform = `translateX(${-(currentImage - 2) * 100}vw)`
+                wrapper.scrollTo({
+                  top: 0,
+                  left: wrapper.scrollLeft - window.innerWidth,
+                  behavior: 'smooth',
+                })
                 setCurrentImage(currentImage - 1)
               } else {
-                slide.style.transform = `translateX(-${(totalImages - 1) * 100}vw)`
+                // slide.style.transform = `translateX(-${(totalImages - 1) * 100}vw)`
+                wrapper.scrollTo({
+                  top: 0,
+                  left: window.innerWidth * totalImages,
+                  behavior: 'smooth',
+                })
                 setCurrentImage(totalImages)
               }
             }}>
@@ -37,13 +58,25 @@ export default function SunroomsPage() {
             </button>
             <button className={styles.nextButton} onClick={() => {
               const slide = document.querySelector('#slide')
+              const wrapper = document.querySelector('#slide-wrapper')
               if (currentImage < totalImages) {
-                // slide.style.boxShadow = '0px 2px 5px #00f'
-                slide.style.transform = `translateX(-${currentImage * 100}vw)`
-                // slide.style.transform = `translateX(-100vw)`
+                // console.log(window.innerWidth)
+                // wrapper.scollLeft += window.innerWidth
+                // wrapper.scrollTo(wrapper.scrollLeft + window.innerWidth, wrapper.scrollTop)
+                wrapper.scrollTo({
+                  top: 0,
+                  left: wrapper.scrollLeft + window.innerWidth,
+                  behavior: 'smooth',
+                })
+                // slide.style.transform = `translateX(-${currentImage * 100}vw)`
                 setCurrentImage(currentImage + 1)
               } else {
-                slide.style.transform = `translateX(0vw)`
+                wrapper.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: 'smooth',
+                })
+                // slide.style.transform = `translateX(0vw)`
                 setCurrentImage(1)
               }
             }}>
