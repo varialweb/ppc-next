@@ -12,9 +12,9 @@ export default function SunroomsPage() {
         <article>
           <section className={styles.slideWrapper}>
             <div id="slide" className={styles.slide}>
-              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p1-1-653w.webp" width="4" height="3"></img>
-              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p2-1-653w.webp" width="4" height="3"></img>
-              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p3-1-653w.webp" width="4" height="3"></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p1-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p2-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p3-1-653w.webp" width="4" height="3" alt=""></img>
             </div>
             <button className={styles.prevButton} onClick={() => {
               const slide = document.querySelector('#slide')
@@ -69,11 +69,11 @@ export default function SunroomsPage() {
               Victorian.
             </p>
             <p>
-              Choose from numerous door options such as 5’, 6’, 7’, & 10’ quad 
+              Choose from numerous door options such as 5&apos;, 6&apos;, 7&apos;, & 10&apos; quad 
               slider doors. 
             </p>
             <p>
-              Choose from many windows such as 3’, 4’, 5', 6', sliders, dual 
+              Choose from many windows such as 3&apos;, 4&apos;, 5&apos;, 6&apos;, sliders, dual 
               sliders, & picture windows.
             </p>
           </section>
