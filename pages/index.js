@@ -172,10 +172,34 @@ export default function Home() {
               A sunroom addition is a great way to maximize more space on your home. 
               It is the perfect home improvement that ties into your house seamlessly 
               in the most luxurious way."
-            img={{
-              src: 'sunroom-slide-1',
-              alt: '',
-            }}
+            imgs={
+              [
+                {
+                  src: 'sunroom-slide-1-v2',
+                  alt: 'A sunroom',
+                },
+                {
+                  src: 'sunroom-slide-2',
+                  alt: 'A second sunroom'
+                },
+                {
+                  src: 'sunroom-slide-3',
+                  alt: 'A sunroom with a skylight and warm lighting'
+                },
+                {
+                  src: 'sunroom-slide-4',
+                  alt: 'A furnished sunroom surrounded by greenery'
+                },
+                {
+                  src: 'sunroom-slide-5',
+                  alt: 'Another furnished sunroom with table, chairs, and ceiling fan'
+                },
+                {
+                  src: 'sunroom-slide-6',
+                  alt: 'A pool inside a sunroom'
+                },
+              ]
+            }
           />
           <Card 
             title="Liferooms"
@@ -183,20 +207,64 @@ export default function Home() {
               Life Room is a fairly new system that is exclusive to Four Seasons Sunrooms. 
               Having us as your certified installers with the Four Seasons Sunrooms family 
               provides you access to this fantastic home improvement."
-            img={{
-              src: 'liferoom-slide-1',
-              alt: ''
-            }}
+            imgs={
+              [
+                {
+                  src: 'liferoom-slide-1-v2',
+                  alt: 'Inside view of a liferoom with sides closing and yellow grass field in background'
+                },
+                {
+                  src: 'liferoom-slide-2',
+                  alt: 'Night view of a liferoom with purple lighting'
+                },
+                {
+                  src: 'liferoom-slide-3',
+                  alt: 'Liferoom covered in snow with a snowman in front of it'
+                },
+                {
+                  src: 'liferoom-slide-4',
+                  alt: `Inside of liferoom in the dark with blue light and Willy Wonka and the Chocolate Factory Factory playing on a projector`
+                },
+                {
+                  src: 'liferoom-slide-5',
+                  alt: `Outside night view of a liferoom. Location: Lido Beach`
+                },
+              ]
+            }
           />
           <Card 
             title="Patio Covers"
             snip="
               The south sound receives a lot of moisture, which limits your patio enjoyment. 
               We have the perfect solution for you."
-            img={{
-              src: 'cover-slide-1',
-              alt: ''
-            }}
+            imgs={
+              [
+                {
+                  src: 'patio-cover-slide-1',
+                  alt: 'Small patio cover'
+                },
+                {
+                  src: 'patio-cover-slide-2-v2',
+                  alt: 'Underneath perspective of cover looking at a green yard'
+                },
+                {
+                  src: 'patio-cover-slide-3',
+                  alt: 'Free standing patio cover that is elevated'
+                },
+                {
+                  src: 'patio-cover-slide-4',
+                  alt: 'A medium-large covered patio with skylights, covered walkway, and a lush green yard'
+                },
+                {
+                  src: 'patio-cover-slide-5',
+                  alt: 'Large and lengthy cover with 6 sky lights and 4 ceiling fans covering a big patio'
+                },
+                {
+                  src: 'patio-cover-slide-6',
+                  alt: 'Solid looking free standing patio cover with brick half-walls'
+                },
+              ]
+            }
           />
           <Card 
             title="Decks"
@@ -204,30 +272,82 @@ export default function Home() {
               A deck is one of the best home improvements for your patio area. 
               Turn your space into an area that is customized to your color preference and 
               matches your home."
-            img={{
-              src: 'deck-slide-1',
-              alt: ''
-            }}
+            imgs={
+              [
+                {
+                  src: 'deck-slide-1-v2',
+                  alt: 'Large deck with dense trees in the background'
+                },
+                {
+                  src: 'deck-slide-2',
+                  alt: 'Short but large deck with basketball on grass'
+                },
+                {
+                  src: 'deck-slide-3',
+                  alt: 'Deck with diamond shaped pattern built into it with patio furniture and a cover'
+                },
+                {
+                  src: 'deck-slide-4',
+                  alt: 'L-shaped deck with sheen from rain and body of water in the background'
+                },
+                {
+                  src: 'deck-slide-5',
+                  alt: 'Tiny porch on front of house'
+                },
+                {
+                  src: 'deck-slide-6',
+                  alt: 'Huge deck wrapping around house'
+                },
+              ]
+          }
           />
-          <Card 
+          {/* <Card 
             title="Power Screens"
             snip="
               One way to really enhance your outdoor living and patio space is to have remote 
               controlled power screens on every side of your patio cover."
-            img={{
-              src: 'screen-slide-1',
-              alt: ''
-            }}
-          />
+            imgs={
+              [
+                {
+                  src: 'power-screen-slide-1',
+                  alt: 'Two screens that are half closed on a small covered patio'
+                }
+              ]
+            }
+          /> */}
           <Card 
             title="Handrails"
             snip="
               We install the highest quality hand railing systems available. 
               You can highly customize your design to match your desired style."
-            img={{
-              src: 'handrail-slide-1',
-              alt: ''
-            }}
+            imgs={
+              [
+                {
+                  src: 'handrail-slide-1',
+                  alt: ''
+                },
+                {
+                  src: 'handrail-slide-2',
+                  alt: ''
+                },
+                {
+                  src: 'handrail-slide-3',
+                  alt: ''
+                },
+                {
+                  src: 'handrail-slide-4',
+                  alt: ''
+                },
+                {
+                  src: 'handrail-slide-5',
+                  alt: ''
+                },
+                {
+                  src: 'handrail-slide-6',
+                  alt: ''
+                },
+              ]
+            }
           />
           <Card 
             title="Retractable Awnings"
@@ -235,10 +355,26 @@ export default function Home() {
               Sometimes you may not have the room to install a permanent awning or patio cover. 
               A retractable awning may be an appropriate way for you to achieve the rain protection
               and sun shade that you need, when you need it."
-            img={{
-              src: 'awning-slide-1',
-              alt: ''
-            }}
+            imgs={
+              [
+                {
+                  src: 'awning-slide-1-v2',
+                  alt: ''
+                },
+                {
+                  src: 'awning-slide-2',
+                  alt: ''
+                },
+                {
+                  src: 'awning-slide-3',
+                  alt: ''
+                },
+                {
+                  src: 'awning-slide-4',
+                  alt: ''
+                },
+              ]
+            }
           />
         </section>
         <Features />

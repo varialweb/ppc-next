@@ -65,12 +65,13 @@
   }
 
   .imgsWrapper {
-    background: #00f;
+    // background: #00f;
     // width: fit-content;
     // height: fit-content;
     display: grid;
-    grid-template-columns: repeat(2, 100%);
-    // overflow-x:
+    grid-template-columns: repeat(7, 100%);
+    // overflow-x: hidden;
+    width: 100vw;
 
     div {
       // background: #00f;
@@ -86,7 +87,7 @@
     }
 
     picture {
-      background: #00f;
+      // background: #00f;
       // width: 50%;
       // height: 50vh;
       // width:max-content;
@@ -153,5 +154,115 @@
           grid-area: button;
           margin-block: 0.8rem;
       }
+  }
+}
+
+$duration: 48s;
+
+.slideImg1, .slideImg2, .slideImg3, .slideImg4, .slideImg5, .slideImg6 {
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  position: relative;
+  opacity: 0;
+}
+
+.slideImg1 {
+  animation-name: slide1;
+  opacity: 1;
+}
+
+.slideImg2 {
+  animation-name: slide2;
+  left: -100%;
+}
+
+.slideImg3 {
+  animation-name: slide3;
+  left: -200%;
+}
+
+.slideImg4 {
+  animation-name: slide4;
+  left: -300%;
+}
+
+.slideImg5 {
+  animation-name: slide5;
+  left: -400%;
+}
+.slideImg6 {
+  animation-name: slide6;
+  left: -500%;
+}
+
+@keyframes slide1 {
+  0% {
+    opacity: 1;
+  }
+  16.66% {
+    opacity: 0;
+  }
+  83.33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    opacity: 0;
+  }
+  16.66% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide3 {
+  16.66% {
+    opacity: 0;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes slide4 {
+  33.33% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  66.67% {
+    opacity: 0;
+  }
+}
+@keyframes slide5 {
+  50% {
+    opacity: 0;
+  }
+  66.67% {
+    opacity: 1;
+  }
+  83.33% {
+    opacity: 0;
+  }
+}
+@keyframes slide6 {
+  66.67% {
+    opacity: 0;
+  }
+  83.33% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

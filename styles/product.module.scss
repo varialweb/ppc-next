@@ -1,0 +1,60 @@
+.product {
+  h1 {
+    text-align: center;
+  }
+
+  .content {
+    width: 87.5%;
+    margin-inline: auto;
+  }
+}
+
+.slideWrapper {
+  height: 75vw;
+  img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .nextButton {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    bottom: calc(37.5vw + 12.5px);
+    left: calc(100vw - 48px - 48px);
+    background: none;
+    border: none;
+  }
+
+  .prevButton {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    bottom: calc(37.5vw + 12.5px);
+    left: 0;
+    background: none;
+    border: none;
+  }
+}
+
+.slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.counter {
+  display: grid;
+  position: relative;
+  font-size: 16px;
+  background: hsl(0 0% 0% / 0.35);
+  color: #fff;
+  height: 2em;
+  text-align: center;
+  // bottom: 30vw;
+  bottom: 5em;
+  align-content: center;
+  // width: fit-content;
+  // padding-inline: 1em;
+  width: 3em;
+  left: calc(100vw - 3em);
+}
