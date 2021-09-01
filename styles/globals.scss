@@ -62,6 +62,10 @@ ul {
   width: 87.5vw;
   margin-inline: auto;
 
+  li {
+    line-height: 1.5;
+  }
+
   @media (min-width: 769px) {
     width: auto;
   }

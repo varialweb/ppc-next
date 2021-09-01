@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Layout from '../components/layout'
 import styles from '../styles/about.module.scss'
 
@@ -109,8 +110,20 @@ export default function AboutPage() {
           </figure>
           <article className={styles.benText}>
             <p>
-              I’m Benjamin John, CEO of Precision Patio Covers. I’ve been in this industry for the past 
-              fifteen years building patio covers, sun rooms, decks, and most exterior home 
+              I’m&nbsp;
+              <a hrf="https://www.benjaminjohn.net">Benjamin John</a>, CEO of 
+              Precision Patio Covers. I’ve been in this industry for the past 
+              fifteen years building&nbsp; 
+              <Link href="/patio-covers/">
+                <a>patio covers</a>
+              </Link>,&nbsp;
+              <Link href="/sunrooms/">
+                <a>sunrooms</a>
+              </Link>,&nbsp;
+              <Link href="/decks/">
+                <a>decks</a>
+              </Link>,
+              and most exterior home 
               improvement projects.
             </p>
             <p>
@@ -119,7 +132,7 @@ export default function AboutPage() {
               happy friends and customers we have met throughout the years.
             </p>
             <p>
-              Give us a call - We&apos;d love to help you with your new home improvement project.
+              <a href="tel:+13605590261">Give us a call</a> - We&apos;d love to help you with your new home improvement project.
             </p>
           </article> 
         </section>

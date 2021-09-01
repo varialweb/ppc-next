@@ -91,10 +91,12 @@ export default function CoversPage() {
         </li>
       </ul>
       <p>
-        President Benjamin John has installed over 2,000 of these systems in the 
-        Puget Sound area over a fifteen year period in every style that you can 
-        possibly imagine. Some of the counties we have services are - 
-        Thurston, Pierce, Lewis, Mason, & King County.
+        President&nbsp;
+        <a href="https://benjaminjohn.net">Benjamin John</a> has installed over 
+        2,000 of these systems in the Puget Sound area over a fifteen year 
+        period in every style that you can possibly imagine. Some of the 
+        counties we have services are - Thurston, Pierce, Lewis, Mason, & King 
+        County.
       </p>
       <p>
         <Link href="/contact/">
