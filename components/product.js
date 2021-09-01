@@ -10,13 +10,17 @@ export default function ProductPage({ title, imgs, description, children }) {
     <Layout description={description}>
       <main className={styles.product}>
         <h1>{title}</h1>
-        <article>
+        <article className={styles.article}>
           <section id="slide-wrapper" className={styles.slideWrapper} onScroll={(event) => {
             const wrapper = document.querySelector('#slide-wrapper')
-            console.log('scroll', wrapper.scrollLeft)
-            if (wrapper.scrollLeft % window.innerWidth === 0) {
-              console.log('match')
-              setCurrentImage((wrapper.scrollLeft / window.innerWidth) + 1)
+            // console.log('scroll', wrapper.scrollLeft)
+            console.log(wrapper.getBoundingClientRect().width)
+            // if (wrapper.scrollLeft % window.innerWidth === 0) {
+            if (Math.round(wrapper.scrollLeft % wrapper.getBoundingClientRect().width) === 0) {
+              // console.log('match')
+              // setCurrentImage((wrapper.scrollLeft / window.innerWidth) + 1)
+  
+              setCurrentImage(Math.round((wrapper.scrollLeft / wrapper.getBoundingClientRect().width) + 1))
             }
             if (wrapper.scrollLeft === 0) {
               setCurrentImage(1)
@@ -45,7 +49,8 @@ export default function ProductPage({ title, imgs, description, children }) {
               if (currentImage > 1) {
                 wrapper.scrollTo({
                   top: 0,
-                  left: wrapper.scrollLeft - window.innerWidth,
+                  // left: wrapper.scrollLeft - window.innerWidth,
+                  left: wrapper.scrollLeft - wrapper.getBoundingClientRect().width,
                   behavior: 'smooth',
                 })
                 setCurrentImage(currentImage - 1)
@@ -72,7 +77,8 @@ export default function ProductPage({ title, imgs, description, children }) {
               if (currentImage < totalImages) {
                 wrapper.scrollTo({
                   top: 0,
-                  left: wrapper.scrollLeft + window.innerWidth,
+                  // left: wrapper.scrollLeft + window.innerWidth,
+                  left: wrapper.scrollLeft + slide.getBoundingClientRect().width,
                   behavior: 'smooth',
                 })
                 setCurrentImage(currentImage + 1)

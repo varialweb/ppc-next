@@ -104,10 +104,10 @@ export default function Nav() {
             <div id="products-pc" className={styles.productsPc} style={{ visibility: menuOpen ? 'visible' : 'hidden' }}>
               <Link href="/sunrooms/"><a>Sunrooms</a></Link>
               <Link href="/liferooms/"><a>Liferooms</a></Link>
-              <Link href="/covers/"><a>Patio Covers</a></Link>
+              <Link href="/patio-covers/"><a>Patio Covers</a></Link>
               <Link href="/decks/"><a>Decks</a></Link>
               <Link href="/handrails/"><a>Handrails</a></Link>
-              <Link href="/awnings/"><a>Retractable Awnings</a></Link>
+              <Link href="/retractable-awnings/"><a>Retractable Awnings</a></Link>
             </div>
             
           </div>
@@ -161,10 +161,10 @@ export default function Nav() {
         <div className={styles.productsMob}>
           <Link href="/sunrooms/"><a>Sunrooms</a></Link>
           <Link href="/liferooms/"><a>Liferooms</a></Link>
-          <Link href="/covers/"><a>Patio Covers</a></Link>
+          <Link href="/patio-covers/"><a>Patio Covers</a></Link>
           <Link href="/decks/"><a>Decks</a></Link>
           <Link href="/handrails/"><a>Handrails</a></Link>
-          <Link href="/awnings/"><a>Retractable Awnings</a></Link>
+          <Link href="/retractable-awnings/"><a>Retractable Awnings</a></Link>
         </div>
       </section>
     </section>

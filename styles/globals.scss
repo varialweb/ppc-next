@@ -20,8 +20,9 @@ a {
   text-decoration: none;
 }
 
-p a {
+p a, li a {
   color: hsl(230 100% 48%);
+  font-weight: 400;
 }
 
 *, *::before, *::after {
@@ -54,6 +55,17 @@ p {
   @media(min-width: 769px) {
       width: 21.7rem;
   }
+}
+
+ul {
+  font-weight: 300;
+  width: 87.5vw;
+  margin-inline: auto;
+
+  @media (min-width: 769px) {
+    width: auto;
+  }
+  // margin-inline: auto;
 }
 
 button {

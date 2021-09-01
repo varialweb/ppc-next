@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ProductPage from "../components/product";
 
 export default function DecksPage() {
@@ -41,7 +42,44 @@ export default function DecksPage() {
   ]
   return (
     <ProductPage title="Decks" description="Decks description" imgs={imgs}>
-      <p>Test</p>
+      <p>
+        A deck is one of the best home improvements for your patio area. Turn 
+        your personal space into an area that is customized to your color 
+        preference and matches your home. We will take your decking plans and 
+        bring them to life for you to enjoy day in and day out. 
+      </p>
+      <h2>Deck customization options</h2>
+      <ul>
+        <li>
+          Composite or wood decking.
+        </li>
+        <li>
+          Custom border inlays
+        </li>
+        <li>
+          Custom design
+        </li>
+        <li>
+          Stairs
+        </li>
+        <li>
+          <Link href="/handrails/">
+            <a>
+              Handrails
+            </a>
+          </Link>
+        </li>
+        <li>
+          Lighting
+        </li>
+      </ul>
+      <p>
+        <Link href="/contact/">
+          <a>
+            &rarr; Start your deck project today.
+          </a>
+        </Link>
+      </p>
     </ProductPage>
   )
 }

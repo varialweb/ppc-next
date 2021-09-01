@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ProductPage from "../components/product"
 
 export default function CoversPage() {
@@ -75,17 +76,32 @@ export default function CoversPage() {
     <ProductPage title="Patio Covers" imgs={imgs} description="Patio covers">
       <p>
         As many of you already know, we get more rain than sun here in the 
-        pacific northwest. The south sound receives a lot of moisture, which 
-        limits your patio enjoyment. Refer to our key features and benefits 
-        section for more good info on why a patio cover is a great option for 
-        your outdoor living. We have the perfect solution for you. We have many 
-        awning and patio cover options to choose from. There are ten wrap kit 
-        colors available. They can be configured as a free-standing cover or 
-        attached in three different ways. President Benjamin John has installed 
-        over 2000 of these systems in the Puget Sound area over a fifteen year 
-        period in every style that you can possibly imagine. Some locations 
-        include Thurston County, Pierce County, Lewis County, Mason County, 
-        & King County.
+        Pacific Northwest. The South Sound receives a lot of moisture, which 
+        limits your patio enjoyment. We have the perfect solution for you.
+      </p>
+      <h2>
+        Configurable Options
+      </h2>
+      <ul>
+        <li>
+          Wrap Kit Color (10 available)
+        </li>
+        <li>
+          Free standing cover or 3 other attachments
+        </li>
+      </ul>
+      <p>
+        President Benjamin John has installed over 2,000 of these systems in the 
+        Puget Sound area over a fifteen year period in every style that you can 
+        possibly imagine. Some of the counties we have services are - 
+        Thurston, Pierce, Lewis, Mason, & King County.
+      </p>
+      <p>
+        <Link href="/contact/">
+          <a>
+            &rarr; Start your patio cover project today.
+          </a>
+        </Link>
       </p>
     </ProductPage>
   )
