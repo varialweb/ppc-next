@@ -20,6 +20,11 @@
     width: 100vw;
     height: auto;
     scroll-snap-align: start;
+    // scroll-snap-alig
+  }
+
+  .nextButton, .prevButton {
+    z-index: 99;
   }
 
   .nextButton {

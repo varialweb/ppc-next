@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from '../styles/card.module.scss'
 
 export default function Card({ title, snip, imgs}) {
-  const link = `/${title.toLowerCase()}/`
+  const link = `/${title.toLowerCase().replace(' ', '-')}/`
 
   function getAllSizes(name) {
     return [

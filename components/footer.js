@@ -39,11 +39,11 @@ export default function Footer() {
       <div className={styles.footerProductLinks}>
         <Link href='/sunrooms/'><a>Sunrooms</a></Link>
         <Link href='/liferooms/'><a>Liferooms</a></Link>
-        <Link href='/covers/'><a>Patio Covers</a></Link>
+        <Link href='/patio-covers/'><a>Patio Covers</a></Link>
         <Link href='/decks/'><a>Decks</a></Link>
-        <Link href='/screens/'><a>Power Screens</a></Link>
+        <Link href='/power-screens/'><a>Power Screens</a></Link>
         <Link href='/handrails/'><a>Handrails</a></Link>
-        <Link href='/awnings/'><a>Retractable Awnings</a></Link>
+        <Link href='/retractable-awnings/'><a>Retractable Awnings</a></Link>
       </div>
       <div className={styles.footerPageLinks}>
         <Link href='/'><a>Home</a></Link>

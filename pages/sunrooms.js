@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import styles from '../styles/product.module.scss'
 
 export default function SunroomsPage() {
-  const totalImages = 3
+  const totalImages = 16
   const [currentImage, setCurrentImage] = useState(1)
   return (
     <Layout>
@@ -25,6 +25,19 @@ export default function SunroomsPage() {
               <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p1-1-653w.webp" width="4" height="3" alt=""></img>
               <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p2-1-653w.webp" width="4" height="3" alt=""></img>
               <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p3-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p4-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p5-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p6-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p7-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p8-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p9-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p10-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p11-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p12-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p13-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p14-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p15-1-653w.webp" width="4" height="3" alt=""></img>
+              <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/sunroom-p16-1-653w.webp" width="4" height="3" alt=""></img>
             </div>
             <button className={styles.prevButton} onClick={() => {
               // const slide = document.querySelector('#slide')
