@@ -72,6 +72,11 @@
     grid-template-columns: repeat(7, 100%);
     overflow-x: hidden;
     width: 100vw;
+    height: 75vw;
+
+    @media (min-width: 769px) {
+      height: 33.75vw;
+    }
 
     div {
       // background: #00f;
@@ -84,6 +89,7 @@
 
       @media (min-width: 769px) {
         border-radius: 4px;
+        height: 33.75vw;
       }
     }
 
