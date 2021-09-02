@@ -30,7 +30,7 @@ export default function Card({ title, snip, imgs}) {
         <source srcSet={imgs[3]} media="(min-width: 451px) and (-webkit-min-device-pixel-ratio: 2)"/>
         <source srcSet={imgs[5]} media="(min-width: 2561px)"/>
         <source srcSet={imgs[3]} media="(min-width: 1921px)"/>
-        <source srcSet={imgs[2]} media="(min-width: 1601px)"/>
+        <source srcSet={imgs[5]} media="(min-width: 1601px)"/>
         <source srcSet={imgs[1]} media="(min-width: 1367px)"/>
         <source srcSet={imgs[0]} media="(min-width: 769px)"/>
         <source srcSet={imgs[2]} media="(min-width: 376px)"/>
