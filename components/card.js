@@ -21,18 +21,13 @@ export default function Card({ title, snip, imgs}) {
     const imgs = imgArr
     return (
       <picture>
-        <source srcSet={imgs[6]} media="(min-width: 1921px) and (-webkit-min-device-pixel-ratio: 2)"/>
-        <source srcSet={imgs[5]} media="(min-width: 1601px) and (-webkit-min-device-pixel-ratio: 2)"/>
-        <source srcSet={imgs[4]} media="(min-width: 1367px) and (-webkit-min-device-pixel-ratio: 2)"/>
-        <source srcSet={imgs[3]} media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)"/>
-        <source srcSet={imgs[5]} media="(min-width: 751px) and (-webkit-min-device-pixel-ratio: 2)"/>
-        <source srcSet={imgs[4]} media="(min-width: 676px) and (-webkit-min-device-pixel-ratio: 2)"/>
-        <source srcSet={imgs[3]} media="(min-width: 451px) and (-webkit-min-device-pixel-ratio: 2)"/>
-        <source srcSet={imgs[5]} media="(min-width: 2561px)"/>
-        <source srcSet={imgs[3]} media="(min-width: 1921px)"/>
+        <source srcSet={imgs[6]} media="(min-width: 1921px)"/>
         <source srcSet={imgs[5]} media="(min-width: 1601px)"/>
-        <source srcSet={imgs[1]} media="(min-width: 1367px)"/>
-        <source srcSet={imgs[0]} media="(min-width: 769px)"/>
+        <source srcSet={imgs[4]} media="(min-width: 1367px)"/>
+        <source srcSet={imgs[3]} media="(min-width: 1280px)"/>
+        <source srcSet={imgs[5]} media="(min-width: 751px)"/>
+        <source srcSet={imgs[4]} media="(min-width: 676px)"/>
+        <source srcSet={imgs[3]} media="(min-width: 451px)"/>
         <source srcSet={imgs[2]} media="(min-width: 376px)"/>
         <source srcSet={imgs[1]} media="(min-width: 321px)"/>
         <img src={imgs[0]} alt={alt} width="640" height="480" className={className} loading={loading}/>
@@ -49,8 +44,6 @@ export default function Card({ title, snip, imgs}) {
         <PictureElement imgArr={getAllSizes(imgs[1]?.src)} alt={imgs[1]?.alt} className={styles.slideImg2}/>
         <PictureElement imgArr={getAllSizes(imgs[2]?.src)} alt={imgs[2]?.alt} className={styles.slideImg3}/>
         <PictureElement imgArr={getAllSizes(imgs[3]?.src)} alt={imgs[3]?.alt} className={styles.slideImg4}/>
-        <PictureElement imgArr={getAllSizes(imgs[4]?.src)} alt={imgs[4]?.alt} className={styles.slideImg5}/>
-        <PictureElement imgArr={getAllSizes(imgs[5]?.src)} alt={imgs[5]?.alt} className={styles.slideImg6}/>
       </div>
       <div className={styles.contentWrapper}>
         <h3>{title}</h3>

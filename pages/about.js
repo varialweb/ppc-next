@@ -111,7 +111,7 @@ export default function AboutPage() {
           <article className={styles.benText}>
             <p>
               I’m&nbsp;
-              <a hrf="https://www.benjaminjohn.net">Benjamin John</a>, CEO of 
+              <a href="https://www.benjaminjohn.net">Benjamin John</a>, CEO of 
               Precision Patio Covers. I’ve been in this industry for the past 
               fifteen years building&nbsp; 
               <Link href="/patio-covers/">

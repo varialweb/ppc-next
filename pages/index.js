@@ -183,16 +183,8 @@ export default function Home() {
                   alt: 'A second sunroom'
                 },
                 {
-                  src: 'sunroom-slide-3',
-                  alt: 'A sunroom with a skylight and warm lighting'
-                },
-                {
                   src: 'sunroom-slide-4',
                   alt: 'A furnished sunroom surrounded by greenery'
-                },
-                {
-                  src: 'sunroom-slide-5',
-                  alt: 'Another furnished sunroom with table, chairs, and ceiling fan'
                 },
                 {
                   src: 'sunroom-slide-6',
@@ -225,10 +217,6 @@ export default function Home() {
                   src: 'liferoom-slide-4',
                   alt: `Inside of liferoom in the dark with blue light and Willy Wonka and the Chocolate Factory Factory playing on a projector`
                 },
-                {
-                  src: 'liferoom-slide-5',
-                  alt: `Outside night view of a liferoom. Location: Lido Beach`
-                },
               ]
             }
           />
@@ -254,14 +242,6 @@ export default function Home() {
                 {
                   src: 'patio-cover-slide-4',
                   alt: 'A medium-large covered patio with skylights, covered walkway, and a lush green yard'
-                },
-                {
-                  src: 'patio-cover-slide-5',
-                  alt: 'Large and lengthy cover with 6 sky lights and 4 ceiling fans covering a big patio'
-                },
-                {
-                  src: 'patio-cover-slide-6',
-                  alt: 'Solid looking free standing patio cover with brick half-walls'
                 },
               ]
             }
@@ -290,18 +270,10 @@ export default function Home() {
                   src: 'deck-slide-4',
                   alt: 'L-shaped deck with sheen from rain and body of water in the background'
                 },
-                {
-                  src: 'deck-slide-5',
-                  alt: 'Tiny porch on front of house'
-                },
-                {
-                  src: 'deck-slide-6',
-                  alt: 'Huge deck wrapping around house'
-                },
               ]
           }
           />
-          {/* <Card 
+          <Card 
             title="Power Screens"
             snip="
               One way to really enhance your outdoor living and patio space is to have remote 
@@ -311,10 +283,22 @@ export default function Home() {
                 {
                   src: 'power-screen-slide-1',
                   alt: 'Two screens that are half closed on a small covered patio'
-                }
+                },
+                {
+                  src: 'screen-slide-2',
+                  alt: 'Two screens that are half closed on a small covered patio'
+                },
+                {
+                  src: 'power-screen-slide-3',
+                  alt: 'Two screens that are half closed on a small covered patio'
+                },
+                {
+                  src: 'power-screen-slide-4',
+                  alt: 'Two screens that are half closed on a small covered patio'
+                },
               ]
             }
-          /> */}
+          />
           <Card 
             title="Handrails"
             snip="
@@ -336,14 +320,6 @@ export default function Home() {
                 },
                 {
                   src: 'handrail-slide-4',
-                  alt: ''
-                },
-                {
-                  src: 'handrail-slide-5',
-                  alt: ''
-                },
-                {
-                  src: 'handrail-slide-6',
                   alt: ''
                 },
               ]

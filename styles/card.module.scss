@@ -164,7 +164,8 @@
   }
 }
 
-$duration: 48s;
+$duration: 40s;
+// $duration: 12s;
 
 .slideImg1, .slideImg2, .slideImg3, .slideImg4, .slideImg5, .slideImg6 {
   animation-duration: $duration;
@@ -206,10 +207,10 @@ $duration: 48s;
   0% {
     opacity: 1;
   }
-  16.66% {
+  25% {
     opacity: 0;
   }
-  83.33% {
+  75% {
     opacity: 0;
   }
   100% {
@@ -221,52 +222,30 @@ $duration: 48s;
   0% {
     opacity: 0;
   }
-  16.66% {
+  25% {
     opacity: 1;
   }
-  33.33% {
+  50% {
     opacity: 0;
   }
 }
 
 @keyframes slide3 {
-  16.66% {
+  25% {
     opacity: 0;
   }
-  33.33% {
+  50% {
     opacity: 1;
   }
-  50% {
+  75% {
     opacity: 0;
   }
 }
 @keyframes slide4 {
-  33.33% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  66.67% {
-    opacity: 0;
-  }
-}
-@keyframes slide5 {
   50% {
     opacity: 0;
   }
-  66.67% {
-    opacity: 1;
-  }
-  83.33% {
-    opacity: 0;
-  }
-}
-@keyframes slide6 {
-  66.67% {
-    opacity: 0;
-  }
-  83.33% {
+  75% {
     opacity: 1;
   }
   100% {

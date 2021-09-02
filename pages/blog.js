@@ -1,4 +1,5 @@
 const contentful = require('contentful')
+import Link from 'next/link'
 import Layout from '../components/layout'
 import styles from '../styles/blog.module.scss'
 
@@ -17,6 +18,7 @@ export async function getServerSideProps() {
     const posts = entries.items
 
     posts.map(post => {
+      console.log(post)
       const fields = post.fields
       const title = fields.title
       const slug = fields.slug
@@ -112,18 +114,22 @@ export default function BlogPage({ posts }) {
             const date = new Date(post.date)
             return (
               <article key={post.title} className={styles.postCard}>
-                <div className={styles.imgWrapper}>
-                  <div className={styles.imgFilter}/>
-                  <picture>
-                    <img
-                      className={styles.mainImage} 
-                      src={post.mainImage.url} 
-                      alt={post.mainImage.alt} 
-                      width={post.mainImage.width} 
-                      height={post.mainImage.height}
-                    />
-                  </picture>
-                </div>
+                <Link href={`/blog/${post.slug}`}>
+                  <a>
+                    <div className={styles.imgWrapper}>
+                    <div className={styles.imgFilter}/>
+                    <picture>
+                      <img
+                        className={styles.mainImage} 
+                        src={post.mainImage.url} 
+                        alt={post.mainImage.alt} 
+                        width={post.mainImage.width} 
+                        height={post.mainImage.height}
+                      />
+                    </picture>
+                  </div>
+                  </a>
+                </Link>
                 <div className={styles.content}>
                   <h2>{post.title}</h2>
                   {

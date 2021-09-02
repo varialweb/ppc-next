@@ -106,6 +106,7 @@ export default function Nav() {
               <Link href="/liferooms/"><a>Liferooms</a></Link>
               <Link href="/patio-covers/"><a>Patio Covers</a></Link>
               <Link href="/decks/"><a>Decks</a></Link>
+              <Link href="/power-screens/"><a>Power Screens</a></Link>
               <Link href="/handrails/"><a>Handrails</a></Link>
               <Link href="/retractable-awnings/"><a>Retractable Awnings</a></Link>
             </div>
@@ -163,6 +164,7 @@ export default function Nav() {
           <Link href="/liferooms/"><a>Liferooms</a></Link>
           <Link href="/patio-covers/"><a>Patio Covers</a></Link>
           <Link href="/decks/"><a>Decks</a></Link>
+          <Link href="/power-screens/"><a>Power Screens</a></Link>
           <Link href="/handrails/"><a>Handrails</a></Link>
           <Link href="/retractable-awnings/"><a>Retractable Awnings</a></Link>
         </div>
