@@ -23,6 +23,9 @@ export default function ContactPage() {
                 message: message,
               })
             })
+            .then(response => { response.json()})
+            .then(data => console.log(data))
+            .then(error => console.error(error))
 
             console.log(name, number, email, message)
           }}>
