@@ -4,13 +4,13 @@ import Nav from './nav'
 import Footer from './footer'
 import styles from '../styles/layout.module.scss'
 
-export default function Layout({ title, children }) {
+export default function Layout({ title, description = "Patio covers, decks, sunrooms, liferooms, pergolas and more in the Great Puget Sound area.", children }) {
   return (
     <div>
       <Head>
         <title>{title} - Precision Patio Covers</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Patio covers, decks, sunrooms, liferooms, pergolas and more in the Great Puget Sound area." />
+        <meta name="description" content={description} />
         <link rel="icon" href="/ppc-icon.jpg"/>
       </Head>
       <Nav />

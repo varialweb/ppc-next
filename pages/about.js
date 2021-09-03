@@ -4,7 +4,8 @@ import styles from '../styles/about.module.scss'
 
 export default function AboutPage() {
   return (
-    <Layout>
+    <Layout title="About Us" description="We pride ourselves on customer satisfaction by providing the best experience 
+    and installing top quality products for our consumers in the Puget Sound region...">
       <main className={styles.about}>
         <h1>Our Goal</h1>
         <section className={styles.team}>

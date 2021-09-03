@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ProductPage from "../components/product";
 
 export default function ScreensPage() {
@@ -20,7 +21,10 @@ export default function ScreensPage() {
     },
   ]
   return (
-    <ProductPage title="Power Screens" description="Power screens description" imgs={imgs}>
+    <ProductPage title="Power Screens" description="One way to really enhance your outdoor living and patio space is to 
+    have these wonderful remote controlled power screens on every side of 
+    your patio cover. These can be used and applied in many ways in 
+    different locations." imgs={imgs}>
       <p>
         One way to really enhance your outdoor living and patio space is to 
         have these wonderful remote controlled power screens on every side of 
@@ -33,8 +37,14 @@ export default function ScreensPage() {
         are many color options, privacy screen selections, and custom lengths 
         to fit nicely in your particular spot. This is an excellent way to keep 
         the bugs and critters out of an enclosed area as well. Now you can enjoy 
-        your patio without the problems of mosquitoes, flys, bees, etc. All of 
-        this conveniently at the touch of a button.
+        your patio without the problems of mosquitoes, flys, bees, etc.
+      </p>
+      <p>
+        <Link href="/contact/">
+          <a>
+            &rarr; Start your power screen project today.
+          </a>
+        </Link>
       </p>
     </ProductPage>
   )

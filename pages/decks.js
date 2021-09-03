@@ -41,7 +41,10 @@ export default function DecksPage() {
     },
   ]
   return (
-    <ProductPage title="Decks" description="Decks description" imgs={imgs}>
+    <ProductPage title="Decks" description="A deck is one of the best home improvements for your patio area. Turn 
+    your personal space into an area that is customized to your color 
+    preference and matches your home. We will take your decking plans and 
+    bring them to life for you to enjoy day in and day out." imgs={imgs}>
       <p>
         A deck is one of the best home improvements for your patio area. Turn 
         your personal space into an area that is customized to your color 

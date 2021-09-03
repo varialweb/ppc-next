@@ -11,6 +11,7 @@
   margin-inline: auto;
   margin-block: 1rem;
   width: 14em;
+  align-items: center;
 
   @media (min-width: 769px) {
     grid-template-columns: 1fr 1fr;
@@ -31,6 +32,8 @@
     display: grid;
     grid-template-columns: 100% 100%;
     width: fit-content;
+    // height: 100%;
+    align-content: center;
     // position: relative;
     // left: -100%;
 
@@ -61,6 +64,9 @@
 
       @media (min-width: 769px) {
         border-radius: 4px;
+        // align-content: center;
+        height: 100%;
+        width: auto;
       }
     }
   }
@@ -68,6 +74,7 @@
   h2 {
     font-size: 1.4rem;
     width: 13rem;
+    // margin-block-start: 0;
     margin-block: 0.5rem;
     margin-inline: auto;
     @media (min-width: 769px) {

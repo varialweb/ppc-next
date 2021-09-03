@@ -3,7 +3,7 @@ import styles from '../styles/privacy.module.scss'
 
 export default function PrivacyPage() {
   return (
-    <Layout>
+    <Layout title="Privacy Policy">
       <main className={styles.privacy}>
         <h1>Privacy Policy</h1>
         <p>

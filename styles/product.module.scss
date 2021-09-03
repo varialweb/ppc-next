@@ -13,6 +13,10 @@
 
     h2 {
       width: 87.5vw;
+
+      @media (min-width: 769px) {
+        width: 21.7rem;
+      }
     }
 
     p {

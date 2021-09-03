@@ -28,7 +28,7 @@ export default function LiferoomsPage() {
   return (
     <ProductPage 
       title="Liferooms" 
-      description="Liferooms description"
+      description="A Life Room is a fairly new system that is exclusive to Four Seasons Sunrooms. Having us as your certified installers with the Four Seasons Sunrooms family provides you access to this fantastic home improvement."
       imgs={imgs}
     >
       <p>

@@ -22,6 +22,7 @@ export async function getServerSideProps() {
       const fields = post.fields
       const title = fields.title
       const slug = fields.slug
+      const description = fields.description
       const date = post.sys.createdAt
       const mainImage = {
         url: 'https:' + fields.mainImage.fields.file.url,
@@ -88,6 +89,7 @@ export async function getServerSideProps() {
         author: author,
         mainImage: mainImage,
         body: body,
+        description: description,
       })
 
       // console.log(body)
@@ -106,7 +108,7 @@ export async function getServerSideProps() {
 
 export default function BlogPage({ posts }) {
   return (
-    <Layout>
+    <Layout title="Recent Blog Posts">
       <main className={styles.blog}>
         {
           posts.map(post => {
@@ -148,7 +150,7 @@ export default function BlogPage({ posts }) {
                       }
                     })
                   }
-                  <p>{snip}</p>
+                  <p>{post.description}</p>
                   <section className={styles.authorSection}>
                     <div className={styles.authorImgWrapper}>
                       <div className={styles.authorFilter}/>

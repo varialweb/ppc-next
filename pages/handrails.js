@@ -25,7 +25,10 @@ export default function HandrailsPage() {
     },
   ]
   return (
-    <ProductPage title="Handrails" description="Handrails description" imgs={imgs}>
+    <ProductPage title="Handrails" description="We install the highest quality hand railing systems available. This is 
+    a great way to add a border to your decking project or concrete slab. 
+    You can highly customize your design to match your desired style. 
+    Custom gates can be added for access into and out of the area." imgs={imgs}>
       <p>
         We install the highest quality hand railing systems available. This is 
         a great way to add a border to your decking project or concrete slab. 

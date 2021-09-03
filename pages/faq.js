@@ -3,7 +3,7 @@ import styles from '../styles/faq.module.scss'
 
 export default function FAQPage() {
   return (
-    <Layout>
+    <Layout title="Frequently Asked Questions">
       <main className={styles.faq}>
         <h1>Frequently Asked Questions</h1>
         <ul>

@@ -19,7 +19,12 @@ export default function AwningsPage() {
   return (
     <ProductPage 
       title="Retractable Awnings" 
-      description="Retractable awnings description" 
+      description="Having a retractable awning may be an appropriate way 
+      for you to achieve the rain protection and sun shade that you need, 
+      when you need it. It&apos;s a simple and convenient way to extend a 
+      patio cover to your liking. We have a group of certified installers 
+      on the team that have installed many of these awnings in the greater 
+      Puget Sound area." 
       imgs={imgs}
     >
       <p>
@@ -30,9 +35,9 @@ export default function AwningsPage() {
         in your location. Having a retractable awning may be an appropriate way 
         for you to achieve the rain protection and sun shade that you need, 
         when you need it. It&apos;s a simple and convenient way to extend a 
-        patio cover to your liking, all at the touch of a button. We have a 
-        group of certified installers on the team that have installed many of 
-        these awnings in the greater Puget Sound area.
+        patio cover to your liking. We have a group of certified installers 
+        on the team that have installed many of these awnings in the greater 
+        Puget Sound area.
       </p>
       <p>
         <Link href="/contact/">

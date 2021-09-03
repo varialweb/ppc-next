@@ -69,7 +69,9 @@ export default function CoversPage() {
     },
   ]
   return (
-    <ProductPage title="Sunrooms" imgs={imgs} description="Sunrooms">
+    <ProductPage title="Sunrooms" imgs={imgs} description="A sunroom addition is a great way to maximize more space on your 
+    home. It is the perfect home improvement that ties into your 
+    house seamlessly in the most luxurious way.">
       <p>
         A sunroom addition is a great way to maximize more space on your 
         home. It is the perfect home improvement that ties into your 

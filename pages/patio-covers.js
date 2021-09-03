@@ -73,7 +73,7 @@ export default function CoversPage() {
     },
   ]
   return (
-    <ProductPage title="Patio Covers" imgs={imgs} description="Patio covers">
+    <ProductPage title="Patio Covers" imgs={imgs} description="The South Sound receives a lot of moisture, which limits your patio enjoyment. We have the perfect solution for you.">
       <p>
         As many of you already know, we get more rain than sun here in the 
         Pacific Northwest. The South Sound receives a lot of moisture, which 

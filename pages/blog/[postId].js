@@ -45,7 +45,7 @@ export async function getStaticProps({ params }) {
     'fields.slug': params.postId,
   }).then(entries => {
     const fields = entries.items[0].fields
-
+    post.description = fields.description
     post.title = fields.title
     post.date = entries.items[0].sys.createdAt
     post.mainImage = {
@@ -123,7 +123,7 @@ export async function getStaticProps({ params }) {
 export default function BlogPost({post}) {
   console.log(post.body)
   return (
-    <Layout>
+    <Layout title={post.title} description={post.description}>
       <article className={styles.article}>
         <header>
           <h1>{post.title}</h1>

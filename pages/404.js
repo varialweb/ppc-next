@@ -4,7 +4,7 @@ import styles from '../styles/404.module.scss'
 
 export default function Custom404() {
   return (
-    <Layout>
+    <Layout title="Page not found" description="The page you requested could not be found.">
       <main className={styles.main}>
         <h1>Page not found</h1>
         <p>

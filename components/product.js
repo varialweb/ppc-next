@@ -7,7 +7,7 @@ export default function ProductPage({ title, imgs, description, children }) {
   const [currentImage, setCurrentImage] = useState(1)
   const base = 'https://d35tzt7i3ppzs4.cloudfront.net/'
   return (
-    <Layout description={description}>
+    <Layout title={title} description={description}>
       <main className={styles.product}>
         <h1>{title}</h1>
         <article className={styles.article}>

@@ -162,7 +162,7 @@
 // }
 
 .main {
-  padding-block: 2rem;
+  padding-block-start: 2rem;
 
   h1 {
       margin-block-end: 2rem;
@@ -202,5 +202,60 @@
 .cards {
   @media (min-width: 769px) {
     margin-block-start: 4em;
+  }
+}
+
+.badges {
+  background: hsl(200, 60%, 94%);
+  border-radius: 4px;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  display: grid;
+  row-gap: 2rem;
+  justify-items: center;
+
+  @media (min-width: 769px) {
+    grid-template-areas: 
+        'a a a'
+        'b c d';
+    padding: 2rem;
+    row-gap: 2rem;
+  }
+
+  a {
+
+    @media (min-width: 769px) {
+      &:first-child {
+        grid-area: a;
+      }
+  
+      &:nth-child(2) {
+        grid-area: b;
+      }
+  
+      &:nth-child(3) {
+        grid-area: c;
+      }
+  
+      &:nth-child(4) {
+        grid-area: d;
+      }
+    }
+    
+  }
+
+  img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+
+    &:first-child {
+      max-width: 300px;
+      // margin-inline: auto;
+    }
+
+    @media (min-width: 769px) {
+      width: 100%;
+    }
   }
 }
