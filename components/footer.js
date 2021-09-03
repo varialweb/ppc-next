@@ -35,6 +35,14 @@ export default function Footer() {
           height='255'
         />
       </a>
+      <a href="https://www.youtube.com/channel/UCOiOApFKEXvDPaRBn5sUpAQ">
+            <img 
+              src="https://precisionpatios.s3.us-west-2.amazonaws.com/youtube_social_circle_red.png"
+              alt="Youtube"
+              width="255"
+              height="255"
+            />
+          </a>
       </div>
       <div className={styles.footerProductLinks}>
         <Link href='/sunrooms/'><a>Sunrooms</a></Link>

@@ -4,6 +4,7 @@ import styles from '../styles/nav.module.scss'
 
 export default function Nav() {
   const [menuOpen, setDropdown] = useState(false)
+  const [productsOpen, setProducts] = useState(false)
 
   useEffect(() => {
     if (menuOpen) {
@@ -13,6 +14,9 @@ export default function Nav() {
         const navLinks = document.querySelector('#nav-links-pc')
         const productLinksPc = document.querySelector('#products-pc')
         const productsButtonPc = document.querySelector('#products-button-pc')
+        const productLinksMob = document.querySelector('#products-mob')
+
+        // productLinksMob.style.visibility = 'visible'
 
         mobNavLinks.style.top = nav.getBoundingClientRect().bottom + 'px'
         productLinksPc.style.top = nav.getBoundingClientRect().bottom + 'px'
@@ -147,19 +151,30 @@ export default function Nav() {
               height='255'
             />
           </a>
+          <a href="https://www.youtube.com/channel/UCOiOApFKEXvDPaRBn5sUpAQ">
+            <img 
+              src="https://precisionpatios.s3.us-west-2.amazonaws.com/youtube_social_circle_red.png"
+              alt="Youtube"
+              width="255"
+              height="255"
+            />
+          </a>
         </section>
       </nav>
       <section 
         className={styles.navLinksMob}
         id='nav-links-mob'
-        style={{ visibility: menuOpen ? 'visible' : 'hidden'}} 
+        style={{ visibility: menuOpen ? 'visible' : 'hidden' }}
       >
         <Link href="/"><a>Home</a></Link>
         <Link href="/about/"><a>About</a></Link>
         <Link href="/blog/"><a>Blog</a></Link>
         <Link href="/contact/"><a>Contact</a></Link>
-        <button>Products</button>
-        <div className={styles.productsMob}>
+        <button onClick={() => {
+          // setDropdown(!menuOpen)
+          setProducts(!productsOpen)
+        }} >Products</button>
+        <div id="products-mob" className={styles.productsMob} style={{ visibility: productsOpen ? 'visible' : 'hidden', height: productsOpen ? 'fit-content' : '0'}}>
           <Link href="/sunrooms/"><a>Sunrooms</a></Link>
           <Link href="/liferooms/"><a>Liferooms</a></Link>
           <Link href="/patio-covers/"><a>Patio Covers</a></Link>

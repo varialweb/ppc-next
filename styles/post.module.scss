@@ -1,4 +1,74 @@
 .article {
   max-width: 1400px;
   margin-inline: auto;
+
+  h1, .authorSection {
+    // width: 87.5vw;
+    margin-inline: 16px;
+  }
+
+  p {
+    // width: 87.5vw;
+    // margin-inline: auto;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.main {
+  margin-inline: 16px;
+}
+
+.authorSection {
+  display: grid;
+  grid-template-areas:
+    'img author'
+    'img date';
+  grid-template-columns: 2.4rem 1fr;
+  // margin-inline: auto;
+  width: 13rem;
+  align-items: center;
+  margin-block-end: 1rem;
+
+  p {
+    margin: 0;
+    font-size: 0.85rem;
+    width: fit-content;
+    padding-inline-start: 0.5rem;
+    line-height: 1;
+  }
+
+  .author {
+    font-weight: 400;
+    grid-area: author;
+  }
+
+  .date {
+    grid-area: date;
+    font-weight: 100;
+  }
+
+  .authorImgWrapper {
+    display: grid;
+    grid-area: img;
+    grid-template-columns: 2.4rem 2.4rem;
+    height: 2.4rem;
+
+    .authorFilter {
+      border-radius: 50%;
+      box-shadow: inset 0px 1px 6px 1px hsl(0 0% 0% / 0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    img {
+      border-radius: 50%;
+      width: auto;
+      height: inherit;
+      position: relative;
+      left: -100%;
+    }
+  }
 }

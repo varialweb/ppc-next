@@ -127,12 +127,22 @@ export default function BlogPost({post}) {
       <article className={styles.article}>
         <header>
           <h1>{post.title}</h1>
+          <section className={styles.authorSection}>
+            <div className={styles.authorImgWrapper}>
+              <div className={styles.authorFilter}/>
+              <img 
+                src={post.author.img.url} 
+                alt={post.author.img.alt} 
+                width={post.author.img.width}
+                height={post.author.img.height}
+              />
+            </div>
+            <p className={styles.author}>{post.author.name}</p>
+            <p className={styles.date}>{new Date(post.date).toDateString()}</p>
+          </section>
           <img src={post.mainImage.url} alt={post.mainImage.alt}/>
-          <p>{new Date(post.date).toDateString()}</p>
-          <p>{post.author.name}</p>
-          <img src={post.author.img.url} alt={post.author.name} />
         </header>
-        <main>
+        <main className={styles.main}>
           {
             documentToReactComponents(JSON.parse(post.body))
           }

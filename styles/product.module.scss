@@ -1,12 +1,19 @@
 .product {
   h1 {
     text-align: center;
+    // width: 87.5vw;
+    max-width: 87.5vw;
+    margin-inline: auto;
   }
 
   .content {
     // width: 87.5%;
     margin-inline: auto;
     grid-area: content;
+
+    h2 {
+      width: 87.5vw;
+    }
 
     p {
       margin-block-start: 0;
