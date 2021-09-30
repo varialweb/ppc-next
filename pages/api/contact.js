@@ -1,10 +1,11 @@
 const nodemailer = require('nodemailer')
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const body = JSON.parse(req.body)
   const date = new Date().toString().split('').splice(4, 11).join('')
 
   let errors = false
+  let successfulEmails = 0
 
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -40,6 +41,10 @@ export default function handler(req, res) {
         errors = true
         console.log('error @ send to client lead:', error)
     }
+    if (info) {
+      successfulEmails++
+      console.log('To client info:', info)
+    }
   })
 
   transporter.sendMail(mailOptions2, (error, info) => {
@@ -47,17 +52,17 @@ export default function handler(req, res) {
         res.status(500).json({error: error})
         errors = true
         console.log('error @ send to precisionpatios@gmail.com:', error)
-    } else {
-        callback(null, {
-            statusCode: 200,
-            body: JSON.stringify({ message: info })
-        })
+    }
+    if (info) {
+      successfulEmails++
+      console.log('To precisionpatios info:', info)
     }
   })
 
 
 
   if (!errors) {
-    res.status(200).json({ message: 'success'})
+    console.log('Emails successfully sent')
+    res.status(200).json({ message: 'emailsent'})
   }
 }

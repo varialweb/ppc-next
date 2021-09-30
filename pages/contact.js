@@ -31,9 +31,13 @@ export default function ContactPage() {
               })
               .then(response => { return response.json()})
               .then(data => {
-                if (data.message === 'success') {
+                if (data.message === 'emailsent') {
                   setSuccess(true)
+                  console.log('SUCCESS:', data)
+                } else {
+                  console.log('DATA: ', data)
                 }
+                console.log('DATA:', data)
               })
               .catch(error => console.error('ERROR:', error))
             }}>
