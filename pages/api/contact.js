@@ -2,7 +2,7 @@ const Mailgun = require('mailgun.js')
 const formData = require('form-data')
 const mailgun = new Mailgun(formData)
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const DOMAIN = process.env.MG_DOMAIN
   const API_KEY = process.env.MG_API_KEY
   const mg = mailgun.client({
@@ -26,10 +26,12 @@ export default function handler(req, res) {
 
   const messageToAdmin = {
     from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
-    to: [process.env.EMAIL_SEND_TO],
+    // to: [process.env.EMAIL_SEND_TO],
+    to: ['danny@varial.dev'],
     subject: `www.precision-patios.com Contact Form Request by ${body.name} on ${date}`,
     html:
       `
+      <h1>Contact Form Submission</h1>
       <h2>Contact Info</h2>
       <div>
         <p>Name: ${body.name}</p>
@@ -42,7 +44,7 @@ export default function handler(req, res) {
       </div>`
   }
 
-  mg.messages.create(DOMAIN, messageToLead)
+  await mg.messages.create(DOMAIN, messageToLead)
     .then(response => {
       console.log(response)
     })
@@ -51,7 +53,7 @@ export default function handler(req, res) {
       errors = true
     })
 
-  mg.messages.create(DOMAIN, messageToAdmin)
+  await mg.messages.create(DOMAIN, messageToAdmin)
     .then(response => {
       console.log(response)
     })
