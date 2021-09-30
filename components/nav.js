@@ -28,7 +28,7 @@ export default function Nav() {
 
     if (window) {
       window.addEventListener('scroll', () => {
-        console.log('test')
+        // console.log('test')
 
         if (document) {
           const nav = document.querySelector('#nav-wrapper')

@@ -1,11 +1,11 @@
 const nodemailer = require('nodemailer')
-// require('dotenv').config()
+require('dotenv').config()
 
 exports.handler = function(event, context, callback) {
 
     console.log('form submitted')
-    // console.log('EMAIL_ADDRESS:', process.env.EMAIL_ADDRESS)
-    console.log('nodemailer:', nodemailer)
+    console.log('EMAIL_ADDRESS:', process.env.EMAIL_ADDRESS)
+    // console.log('nodemailer:', nodemailer)
 
     const body = JSON.parse(event.body)
     const date = new Date().toString().split('').splice(4, 11).join('')
@@ -34,8 +34,8 @@ exports.handler = function(event, context, callback) {
     let mailOptions1 = {
         from: process.env.EMAIL_ADDRESS,
         to: body.email,
-        subject: 'Your contact request from www.BenjaminJohn.net',
-        text: 'Thank you for your contact request. Please allow up to 24 hours business days to receive your reply from Benjamin.'
+        subject: 'Your contact request from www.precision-patios.com',
+        text: 'Thank you for your contact request. Please allow up to 24 hours to receive your reply from Precision Patio Covers.'
     }
 
     transporter.sendMail(mailOptions1, (error, info) => {
@@ -46,20 +46,11 @@ exports.handler = function(event, context, callback) {
                     error: error
                 })
             })
-            console.log('error:', error)
+            console.log('error @ send to client lead:', error)
         }
     })
 
-    let mailOptions2 = {
-        from: process.env.EMAIL_ADDRESS,
-        to: process.env.EMAIL_SEND_TO,
-        subject: 'CONTACT REQUESTED: ' + body.name + ' at' + date,
-        text: 
-            `Contact requested at ${date} by ${body.name}
-            Email: ${body.email}
-            Phone Number: ${body.number}
-            Message: ${body.message}`
-    }
+    
 
     transporter.sendMail(mailOptions2, (error, info) => {
         if (error) {
@@ -69,7 +60,7 @@ exports.handler = function(event, context, callback) {
                     error: error
                 })
             })
-            console.log('error:', error)
+            console.log('error @ send to precisionpatios@gmail.com:', error)
         } else {
             callback(null, {
                 statusCode: 200,
