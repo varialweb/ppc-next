@@ -12,7 +12,7 @@ export default function handler(req, res) {
 
   let errors = false
 
-  console.log('body', body)
+  // console.log('body', body)
 
   const messageToLead = {
     from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
@@ -23,8 +23,7 @@ export default function handler(req, res) {
 
   const messageToAdmin = {
     from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
-    // to: process.env.EMAIL_SEND_TO,
-    to: 'danny@varial.dev',
+    to: process.env.EMAIL_SEND_TO,
     subject: `www.precision-patios.com Contact Form Request by ${body.name} on ${date}`,
     html:
       `
