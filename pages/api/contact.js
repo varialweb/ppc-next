@@ -26,8 +26,8 @@ export default async function handler(req, res) {
 
   const messageToAdmin = {
     from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
-    // to: [process.env.EMAIL_SEND_TO],
-    to: ['danny@varial.dev'],
+    to: [process.env.EMAIL_SEND_TO],
+    // to: ['danny@varial.dev'],
     subject: `www.precision-patios.com Contact Form Request by ${body.name} on ${date}`,
     html:
       `
