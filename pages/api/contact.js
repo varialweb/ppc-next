@@ -1,68 +1,54 @@
-const nodemailer = require('nodemailer')
+const mailgun = require('mailgun-js')
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
+  const DOMAIN = process.env.MG_DOMAIN
+  const API_KEY = process.env.MG_API_KEY
+  const mg = mailgun({
+    apiKey: API_KEY,
+    domain: DOMAIN,
+  })
   const body = JSON.parse(req.body)
   const date = new Date().toString().split('').splice(4, 11).join('')
 
   let errors = false
-  let successfulEmails = 0
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-        user: process.env.EMAIL_ADDRESS,
-        pass: process.env.EMAIL_PASSWORD,
-    }
-  })
+  console.log('body.email:', body.email)
 
-  let mailOptions1 = {
-    from: process.env.EMAIL_ADDRESS,
+  const messageToLead = {
+    from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
     to: body.email,
-    subject: 'Your contact request from www.precision-patios.com',
-    text: 'Thank you for your contact request. Please allow up to 24 hours to receive your reply from Precision Patio Covers.'
+    subject: 'Contact request submitted at Precision Patio Covers',
+    text: `Thank you for your inquiry. Your contact request will be processed and you should receive a response within 24 hours. Have a great day!`
   }
 
-  let mailOptions2 = {
-    from: process.env.EMAIL_ADDRESS,
+  const messageToAdmin = {
+    from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
     to: process.env.EMAIL_SEND_TO,
-    subject: 'CONTACT REQUESTED: ' + body.name + ' at ' + date,
-    text: 
-        `Contact requested at ${date} by ${body.name}
-        Email: ${body.email}
-        Phone Number: ${body.number}
-        Message: ${body.message}`
+    subject: `www.precision-patios.com Contact Form Request by ${body.name} on ${date}`,
+    text:
+      `Message From User:
+      ${body.message}`
   }
 
-  transporter.sendMail(mailOptions1, (error, info) => {
+  mg.messages().send(messageToLead, (error, body) => {
+    console.log(body)
+
     if (error) {
-        res.status(500).json({error: error})
-        errors = true
-        console.log('error @ send to client lead:', error)
-    }
-    if (info) {
-      successfulEmails++
-      console.log('To client info:', info)
+      errors = true
+      res.status(500).json({ error: error })
     }
   })
 
-  transporter.sendMail(mailOptions2, (error, info) => {
+  mg.messages().send(messageToAdmin, (error, body) => {
+    console.log(body)
+
     if (error) {
-        res.status(500).json({error: error})
-        errors = true
-        console.log('error @ send to precisionpatios@gmail.com:', error)
-    }
-    if (info) {
-      successfulEmails++
-      console.log('To precisionpatios info:', info)
+      errors = true
+      res.status(500).json({ error: error })
     }
   })
-
-
 
   if (!errors) {
-    console.log('Emails successfully sent')
-    res.status(200).json({ message: 'emailsent'})
+    res.status(200).json({ message: 'messages sent'})
   }
 }

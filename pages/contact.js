@@ -31,7 +31,7 @@ export default function ContactPage() {
               })
               .then(response => { return response.json()})
               .then(data => {
-                if (data.message === 'emailsent') {
+                if (data.message === 'messages sent') {
                   setSuccess(true)
                   console.log('SUCCESS:', data)
                 } else {
