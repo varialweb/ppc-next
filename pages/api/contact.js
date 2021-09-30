@@ -12,7 +12,7 @@ export default function handler(req, res) {
 
   let errors = false
 
-  console.log('body.email:', body.email)
+  console.log('body', body)
 
   const messageToLead = {
     from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
@@ -23,11 +23,21 @@ export default function handler(req, res) {
 
   const messageToAdmin = {
     from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
-    to: process.env.EMAIL_SEND_TO,
+    // to: process.env.EMAIL_SEND_TO,
+    to: 'danny@varial.dev',
     subject: `www.precision-patios.com Contact Form Request by ${body.name} on ${date}`,
-    text:
-      `Message From User:
-      ${body.message}`
+    html:
+      `
+      <h2>Contact Info</h2>
+      <div>
+        <p>Name: ${body.name}</p>
+        <p>Email: ${body.email}</p>
+        <p>Phone: ${body.number}</p>
+      </div>
+      <h2>Message From User:</h2>
+      <div>
+        <p>${body.message}</p>
+      </div>`
   }
 
   mg.messages().send(messageToLead, (error, body) => {
