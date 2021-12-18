@@ -12,7 +12,9 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.2.0",
     "contentful": "^8.5.0",
+    "facebook-nodejs-business-sdk": "^12.0.1",
     "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
     "mailgun.js": "^3.5.9",
     "next": "11.1.0",
     "nodemailer": "^6.6.3",

@@ -4,8 +4,72 @@ import Layout from '../components/layout'
 import Card from '../components/card'
 import Features from '../components/features'
 import styles from '../styles/home.module.scss'
+import Script from 'next/script'
+import { useEffect } from 'react'
+import { createHash } from 'crypto'
 
-export default function Home() {
+
+// const bizSdk = require('facebook-nodejs-business-sdk')
+// const UserData = bizSdk.UserData
+// const ServerEvent = bizSdk.ServerEvent
+// const EventRequest = bizSdk.EventRequest
+
+
+
+export default function Home({ pixelId, pixelAccessToken, }) {
+
+  useEffect(() => {
+    console.log(pixelId)
+
+    window.addEventListener('load', async (event) => {
+      console.log('load')
+
+      
+      const em_hash = createHash('sha256')
+      em_hash.update('')
+
+  await fetch(`https://graph.facebook.com/v12.0/${pixelId}/events?access_token=${pixelAccessToken}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      'data': [
+        {
+          'event_name': 'test',
+          'event_time': Math.floor(new Date() / 1000),
+          'action_source': 'website',
+          'user_data': {
+            // 'em': 'danny@varial.dev',
+            'em': em_hash.digest('hex'),
+          },  
+        }
+      ],
+      'test_event_code': 'TEST89908',
+    })
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
+
+      // await fetch(`https://graph.facebook.com/v12.0/${pixelId}/events?access_token=${pixelAccessToken}`, 
+      //   {
+      //     method: 'POST',
+      //     body: JSON.stringify({
+      //       "data": [
+      //         {
+      //           'event_name': 'view',
+      //           'event_time': new Date().toString(),
+      //         }
+      //       ]
+      //     })
+      //   }
+      // )
+      // .then(response => response.json())
+      // .then(data => console.log(data))
+      // .catch(error => console.error(error))
+    })
+  }, [])
   return (
     <Layout title="Transform Your Outdoor Living">
       <Head>
@@ -369,6 +433,47 @@ export default function Home() {
           </a>
         </section>
       </main>
+      {/* <Script>
+          {console.log(pixelId)}
+          {console.log(pixelAccessToken)}
+      </Script> */}
     </Layout>
   )
+}
+
+export async function getServerSideProps(context) {
+  const pixelId = process.env.PIXEL_ID
+  const pixelAccessToken = process.env.PIXEL_ACCESS_TOKEN
+
+  // console.log(context)
+
+  // const userData = (new UserData())
+  //       .setEmails(['danny@varial.dev'])
+  //       .setPhones(['5642008504'])
+      
+  //     const serverEvent = (new ServerEvent())
+  //       .setEventName('view')
+  //       .setEventTime(Math.floor(new Date() / 1000))
+  //       .setEventSourceUrl('https://www.precision-patios.com/')
+  //       .setActionSource('website')
+  //       .setTestEventCode('TEST89908')
+
+  //     const eventsData = [serverEvent]
+
+  //     const eventRequest = (new EventRequest(pixelAccessToken, pixelId))
+  //       .setEvents(eventsData)
+
+  //     eventRequest.execute().then(
+  //       response => console.log('Response:', response),
+  //       err => console.error('Error:', err)
+  //     )
+
+  
+
+  return {
+    props: {
+      pixelId,
+      pixelAccessToken,
+    }
+  }
 }
