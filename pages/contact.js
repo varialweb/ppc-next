@@ -1,6 +1,7 @@
 import Layout from '../components/layout'
 import styles from '../styles/contact.module.scss'
 import { useState } from 'react'
+import ReactGA from 'react-ga'
 
 export default function ContactPage() {
   const [success, setSuccess] = useState(false)
@@ -33,6 +34,7 @@ export default function ContactPage() {
               .then(data => {
                 if (data.message === 'messages sent') {
                   setSuccess(true)
+                  ReactGA('gtag_UA_155239406_1.send', 'event', 'Form', 'Submit', 'Contact Form');
                   console.log('SUCCESS:', data)
                 } else {
                   console.log('DATA: ', data)
