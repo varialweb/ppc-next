@@ -9,12 +9,6 @@ import { useEffect } from 'react'
 import { createHash } from 'crypto'
 
 
-// const bizSdk = require('facebook-nodejs-business-sdk')
-// const UserData = bizSdk.UserData
-// const ServerEvent = bizSdk.ServerEvent
-// const EventRequest = bizSdk.EventRequest
-
-
 
 export default function Home({ pixelId, pixelAccessToken, }) {
 
@@ -322,10 +316,10 @@ export default function Home({ pixelId, pixelAccessToken, }) {
                   src: 'deck-slide-1-v2',
                   alt: 'Large deck with dense trees in the background'
                 },
-                {
-                  src: 'deck-slide-2',
-                  alt: 'Short but large deck with basketball on grass'
-                },
+                // {
+                //   src: 'deck-slide-2',
+                //   alt: 'Short but large deck with basketball on grass'
+                // },
                 {
                   src: 'deck-slide-3',
                   alt: 'Deck with diamond shaped pattern built into it with patio furniture and a cover'

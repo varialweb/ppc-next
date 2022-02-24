@@ -6,6 +6,7 @@ export default function ProductPage({ title, imgs, description, children }) {
   const totalImages = imgs.length
   const [currentImage, setCurrentImage] = useState(1)
   const base = 'https://d35tzt7i3ppzs4.cloudfront.net/'
+
   return (
     <Layout title={title} description={description}>
       <main className={styles.product}>
@@ -13,15 +14,7 @@ export default function ProductPage({ title, imgs, description, children }) {
         <article className={styles.article}>
           <section id="slide-wrapper" className={styles.slideWrapper} onScroll={(event) => {
             const wrapper = document.querySelector('#slide-wrapper')
-            // console.log('scroll', wrapper.scrollLeft)
-            console.log(wrapper.getBoundingClientRect().width)
-            // if (wrapper.scrollLeft % window.innerWidth === 0) {
-            if (Math.round(wrapper.scrollLeft % wrapper.getBoundingClientRect().width) === 0) {
-              // console.log('match')
-              // setCurrentImage((wrapper.scrollLeft / window.innerWidth) + 1)
-  
-              setCurrentImage(Math.round((wrapper.scrollLeft / wrapper.getBoundingClientRect().width) + 1))
-            }
+            setCurrentImage(Math.round((wrapper.scrollLeft / wrapper.getBoundingClientRect().width) + 1))
             if (wrapper.scrollLeft === 0) {
               setCurrentImage(1)
             }
@@ -49,7 +42,6 @@ export default function ProductPage({ title, imgs, description, children }) {
               if (currentImage > 1) {
                 wrapper.scrollTo({
                   top: 0,
-                  // left: wrapper.scrollLeft - window.innerWidth,
                   left: wrapper.scrollLeft - wrapper.getBoundingClientRect().width,
                   behavior: 'smooth',
                 })
@@ -77,7 +69,6 @@ export default function ProductPage({ title, imgs, description, children }) {
               if (currentImage < totalImages) {
                 wrapper.scrollTo({
                   top: 0,
-                  // left: wrapper.scrollLeft + window.innerWidth,
                   left: wrapper.scrollLeft + slide.getBoundingClientRect().width,
                   behavior: 'smooth',
                 })

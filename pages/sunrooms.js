@@ -7,14 +7,14 @@ export default function CoversPage() {
       src: 'sunroom-p1-1',
       alt: ''
     },
-    {
-      src: 'sunroom-p2-1',
-      alt: ''
-    },
-    {
-      src: 'sunroom-p3-1',
-      alt: ''
-    },
+    // {
+    //   src: 'sunroom-p2-1',
+    //   alt: ''
+    // },
+    // {
+    //   src: 'sunroom-p3-1',
+    //   alt: ''
+    // },
     {
       src: 'sunroom-p4-1',
       alt: ''
