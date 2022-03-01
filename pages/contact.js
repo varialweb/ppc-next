@@ -19,7 +19,8 @@ export default function ContactPage() {
               const name = event.target[0].value
               const number = event.target[1].value
               const email = event.target[2].value
-              const message = event.target[3].value
+              const city = event.target[3].value
+              const message = event.target[4].value
 
               await fetch('/api/contact', {
                 method: 'POST',
@@ -27,6 +28,7 @@ export default function ContactPage() {
                   name: name,
                   number: number,
                   email: email,
+                  city: city,
                   message: message,
                 })
               })
@@ -45,13 +47,15 @@ export default function ContactPage() {
             }}>
             <h1>Contact Us</h1>
             <label htmlFor="name">Name:</label>
-            <input type="text" name="name" required/>
+            <input type="text" name="name" id="name" required/>
             <label htmlFor="phone">Phone Number:</label>
-            <input type="number" name="phone" required/>
+            <input type="number" name="phone" id="phone" required/>
             <label htmlFor="email">Email:</label>
-            <input type="email" name="email" required/>
+            <input type="email" name="email" id="email" required/>
+            <label htmlFor="city">City:</label>
+            <input name="city" id="city" required />
             <label htmlFor="message">Message:</label>
-            <textarea name="message" required></textarea>
+            <textarea name="message" id="message" required></textarea>
             <button>Send</button>
           </form>
         }

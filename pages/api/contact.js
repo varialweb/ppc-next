@@ -36,6 +36,7 @@ export default async function handler(req, res) {
       <div>
         <p>Name: ${body.name}</p>
         <p>Email: ${body.email}</p>
+        <p>City: ${body.city}</p>
         <p>Phone: ${body.number}</p>
       </div>
       <h2>Message From User:</h2>
