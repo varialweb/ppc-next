@@ -1,3 +1,7 @@
+$numberOfHeroSlides: 7;
+$oneSlidePercentage: 100 / $numberOfHeroSlides;
+
+
 .heroImg, .heroImgPc {
   width: 100vw;
   height: auto;
@@ -20,25 +24,12 @@
 }
 
 .heroImgWrapper, .heroImgWrapperPc {
-  grid-template-columns: repeat(6, 100vw);
+  grid-template-columns: repeat(7, 100vw);
 }
-
-// .heroImgWrapperPc {
-//   picture {
-//     position: relative;
-//     animation-duration: 48s;
-//     animation-iteration-count: infinite;
-//     opacity: 1;
-
-//     &:nth-child(1) {
-//       opacity: 1;
-//     }
-//   }
-// }
 
 .heroImg, .heroImgWrapperPc picture {
   position: relative;
-  animation-duration: 48s;
+  animation-duration: $numberOfHeroSlides * 8s;
   animation-iteration-count: infinite;
   opacity: 0;
 
@@ -72,6 +63,11 @@
     animation-name: heroImg6;
   }
 
+  &:nth-child(7) {
+    left: -600%;
+    animation-name: heroImg7;
+  }
+
 
   @media (min-width: 769px) {
     // display: none!important;
@@ -82,10 +78,11 @@
   0% {
     opacity: 1;
   }
-  16.67% {
+  #{$oneSlidePercentage * 1%} {
     opacity: 0;
   }
-  83.33% {
+  #{100 - $oneSlidePercentage * 1%} {
+  // 85.7153% {
     opacity: 0;
   }
   100% {
@@ -97,69 +94,72 @@
   0% {
     opacity: 0;
   }
-  16.67% {
+  #{$oneSlidePercentage * 1%} {
     opacity: 1;
   }
-  33.33% {
+  #{$oneSlidePercentage * 2%} {
     opacity: 0;
   }
 }
 
 @keyframes heroImg3 {
-  16.67% {
+  #{$oneSlidePercentage * 1%} {
     opacity: 0;
   }
-  33.33% {
+  #{$oneSlidePercentage * 2%} {
     opacity: 1;
   }
-  50% {
+  #{$oneSlidePercentage * 3%} {
     opacity: 0;
   }
 }
 
 @keyframes heroImg4 {
-  33.33% {
+  #{$oneSlidePercentage * 2%} {
     opacity: 0;
   }
-  50% {
+  #{$oneSlidePercentage * 3%} {
     opacity: 1;
   }
-  66.67% {
+  #{$oneSlidePercentage * 4%} {
     opacity: 0;
   }
 }
 
 @keyframes heroImg5 {
-  50% {
+  #{$oneSlidePercentage * 3%} {
     opacity: 0;
   }
-  66.67% {
+  #{$oneSlidePercentage * 4%} {
     opacity: 1;
   }
-  83.33% {
+  #{$oneSlidePercentage * 5%} {
     opacity: 0;
   }
 }
 
 @keyframes heroImg6 {
-  66.67% {
+  #{$oneSlidePercentage * 4%} {
     opacity: 0;
   }
-  83.33% {
+  #{$oneSlidePercentage * 5%} {
     opacity: 1;
   }
-  100% {
+  #{$oneSlidePercentage * 6%} {
     opacity: 0;
   }
 }
-
-// .heroImgPc {
-//   display: none;
-
-//   @media (min-width: 769px) {
-//     display: block;
-//   }
-// }
+@keyframes heroImg7 {
+  #{$oneSlidePercentage * 5%} {
+    opacity: 0;
+  }
+  #{$oneSlidePercentage * 6%} {
+    opacity: 1;
+  }
+  #{$oneSlidePercentage * 7%} {
+    opacity: 0;
+  }
+}
 
 .main {
   padding-block-start: 2rem;

@@ -206,6 +206,29 @@ export default function Home({ pixelId, pixelAccessToken, }) {
               alt=""
             />
           </picture>
+          <picture>
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-3840w.webp" media="(min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-3840w.webp" media="(min-width: 3840px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-3200w.webp" media="(min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-3200w.webp" media="(min-width: 3200px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-2732w.webp" media="(min-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-2732w.webp" media="(min-width: 2732px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-2560w.webp" media="(min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-2560w.webp" media="(min-width: 2560px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1920w.webp" media="(min-width: 1920px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1600w.webp" media="(min-width: 1600px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1366w.webp" media="(min-width: 1366px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1280.webp" media="(min-width: 1280px)" />
+            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1080w.webp" media="(-webkit-min-device-pixel-ratio: 3" />
+            <img 
+              className={styles.heroImgPc}
+              src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-720w.webp"
+              width={"360"}
+              height={"360"}
+              alt=""
+            />
+          </picture>
         </div>
       </section>
       <main className={styles.main}>
