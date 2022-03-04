@@ -396,7 +396,7 @@ export default function Home({ pixelId, pixelAccessToken, }) {
                   alt: ''
                 },
                 {
-                  src: 'handrail-slide-3',
+                  src: 'handrail-slide-5',
                   alt: ''
                 },
                 {

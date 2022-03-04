@@ -4,6 +4,14 @@ import ProductPage from "../components/product"
 export default function CoversPage() {
   const imgs = [
     {
+      src: 'patio-cover-p18-1',
+      alt: ''
+    },
+    {
+      src: 'patio-cover-p19-1',
+      alt: ''
+    },
+    {
       src: 'patio-cover-p1-1',
       alt: ''
     },

@@ -23,6 +23,14 @@ export default function HandrailsPage() {
       src: 'handrail-p4-1',
       alt: ''
     },
+    {
+      src: 'handrail-p5-1',
+      alt: ''
+    },
+    {
+      src: 'handrail-p6-1',
+      alt: ''
+    },
   ]
   return (
     <ProductPage title="Handrails" description="We install the highest quality hand railing systems available. This is 
