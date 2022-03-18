@@ -30,7 +30,7 @@ export default function Card({ title, snip, imgs}) {
         <source srcSet={imgs[3]} media="(min-width: 451px)"/>
         <source srcSet={imgs[2]} media="(min-width: 376px)"/>
         <source srcSet={imgs[1]} media="(min-width: 321px)"/>
-        <img src={imgs[0]} alt={alt} width="640" height="480" className={className} loading={loading}/>
+        <img src={imgs[0]} alt={alt || ""} width="640" height="480" className={className} loading={loading}/>
       </picture>
     )
   }

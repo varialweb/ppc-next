@@ -195,7 +195,7 @@ export default function Home({ pixelId, pixelAccessToken, }) {
             <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1600w.webp" media="(min-width: 1600px)" />
             <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1366w.webp" media="(min-width: 1366px)" />
             <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1280.webp" media="(min-width: 1280px)" />
-            <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1080w.webp" media="(-webkit-min-device-pixel-ratio: 3" />
+            {/* <source srcSet="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-1080w.webp" media="(-webkit-min-device-pixel-ratio: 3" /> */}
             <img 
               className={styles.heroImgPc}
               src="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-7-720w.webp"
