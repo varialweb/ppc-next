@@ -35,7 +35,7 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
       {children}
       <Footer />
       <Script src="https://www.googletagmanager.com/gtag/js?id=UA-155239406-1" strategy='afterInteractive' />
-      <Script src="https://connect.facebook.net/en_US/fbevents.js" strategy='afterInteractive' />
+      {/* <Script src="https://connect.facebook.net/en_US/fbevents.js" strategy='afterInteractive' /> */}
       <Script 
         strategy='afterInteractive'
         dangerouslySetInnerHTML={{
@@ -47,7 +47,7 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
           `
         }}
       />
-      <Script 
+      {/* <Script 
         strategy='lazyOnload'
         dangerouslySetInnerHTML={{ 
           __html: `
@@ -61,9 +61,9 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
               fbq('track', 'PageView');
           `
         }} 
-      />
-      {/* <Script 
-        strategy='afterInteractive'
+      /> */}
+      <Script 
+        strategy='lazyOnload'
         dangerouslySetInnerHTML={{ 
           __html: `
           !function(f,b,e,v,n,t,s)
@@ -78,7 +78,7 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
               fbq('track', 'PageView');
           `
         }} 
-      /> */}
+      />
     </div>
   )
 }
