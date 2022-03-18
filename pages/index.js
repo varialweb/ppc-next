@@ -4,74 +4,49 @@ import Layout from '../components/layout'
 import Card from '../components/card'
 import Features from '../components/features'
 import styles from '../styles/home.module.scss'
-import Script from 'next/script'
 import { useEffect } from 'react'
 import { createHash } from 'crypto'
 
-
-
 export default function Home({ pixelId, pixelAccessToken, }) {
 
-  useEffect(() => {
-    console.log(pixelId)
+  // useEffect(() => {
+  //   console.log(pixelId)
 
-    window.addEventListener('load', async (event) => {
-      console.log('load')
+  //   window.addEventListener('load', async (event) => {
+  //     console.log('load')
 
       
-      const em_hash = createHash('sha256')
-      em_hash.update('')
+  //     const em_hash = createHash('sha256')
+  //     em_hash.update('')
 
-  await fetch(`https://graph.facebook.com/v12.0/${pixelId}/events?access_token=${pixelAccessToken}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      'data': [
-        {
-          'event_name': 'test',
-          'event_time': Math.floor(new Date() / 1000),
-          'action_source': 'website',
-          'user_data': {
-            // 'em': 'danny@varial.dev',
-            'em': em_hash.digest('hex'),
-          },  
-        }
-      ],
-      'test_event_code': 'TEST89908',
-    })
-  })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error))
+  // // await fetch(`https://graph.facebook.com/v12.0/${pixelId}/events?access_token=${pixelAccessToken}`, {
+  // //   method: 'POST',
+  // //   headers: {
+  // //     'Content-Type': 'application/json',
+  // //   },
+  // //   body: JSON.stringify({
+  // //     'data': [
+  // //       {
+  // //         'event_name': 'test',
+  // //         'event_time': Math.floor(new Date() / 1000),
+  // //         'action_source': 'website',
+  // //         'user_data': {
+  // //           // 'em': 'danny@varial.dev',
+  // //           'em': em_hash.digest('hex'),
+  // //         },  
+  // //       }
+  // //     ],
+  // //     'test_event_code': 'TEST89908',
+  // //   })
+  // // })
+  // // .then(response => response.json())
+  // // .then(data => console.log(data))
+  // // .catch(error => console.error(error))
+  //   })
+  // }, [])
 
-      // await fetch(`https://graph.facebook.com/v12.0/${pixelId}/events?access_token=${pixelAccessToken}`, 
-      //   {
-      //     method: 'POST',
-      //     body: JSON.stringify({
-      //       "data": [
-      //         {
-      //           'event_name': 'view',
-      //           'event_time': new Date().toString(),
-      //         }
-      //       ]
-      //     })
-      //   }
-      // )
-      // .then(response => response.json())
-      // .then(data => console.log(data))
-      // .catch(error => console.error(error))
-    })
-  }, [])
   return (
     <Layout title="Transform Your Outdoor Living">
-      <Head>
-        {/* <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-1-v4-720w.webp" as="image"/>
-        <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-2-720w.webp" as="image"/>
-        <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-3-720w.webp" as="image"/>
-        <link preload="https://d35tzt7i3ppzs4.cloudfront.net/slide-img-4-720w.webp" as="image"/> */}
-      </Head>
       <section className={styles.hero}>
         <div className={styles.heroImgWrapperPc}>
           <picture>
@@ -450,10 +425,6 @@ export default function Home({ pixelId, pixelAccessToken, }) {
           </a>
         </section>
       </main>
-      {/* <Script>
-          {console.log(pixelId)}
-          {console.log(pixelAccessToken)}
-      </Script> */}
     </Layout>
   )
 }

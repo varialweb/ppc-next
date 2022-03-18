@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 // UA-155239406-1
 
@@ -15,8 +16,8 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155239406-1" />
-          <script
+          {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155239406-1" /> */}
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -25,8 +26,8 @@ class MyDocument extends Document {
                 gtag('config', 'UA-155239406-1', { page_path: window.location.pathname });
               `,
             }}
-          />
-          <script 
+          /> */}
+          {/* <script 
             dangerouslySetInnerHTML={{
               __html: `
               !function(f,b,e,v,n,t,s)
@@ -41,7 +42,7 @@ class MyDocument extends Document {
               fbq('track', 'PageView');
               `
             }}
-          />
+          /> */}
         </Head>
         <body> 
           <Main />
