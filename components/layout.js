@@ -34,8 +34,9 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
       </header>
       {children}
       <Footer />
-      <Script src="https://www.googletagmanager.com/gtag/js?id=UA-155239406-1" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=UA-155239406-1" strategy='afterInteractive' />
       <Script 
+        strategy='afterInteractive'
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -46,6 +47,7 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
         }}
       />
       <Script 
+        strategy='afterInteractive'
         dangerouslySetInnerHTML={{ 
           __html: `
           !function(f,b,e,v,n,t,s)
