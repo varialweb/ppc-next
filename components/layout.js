@@ -48,7 +48,7 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
         }}
       />
       <Script 
-        strategy='afterInteractive'
+        strategy='lazyOnload'
         dangerouslySetInnerHTML={{ 
           __html: `
           !function(f,b,e,v,n,t,s)
