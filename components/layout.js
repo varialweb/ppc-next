@@ -35,6 +35,7 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
       {children}
       <Footer />
       <Script src="https://www.googletagmanager.com/gtag/js?id=UA-155239406-1" strategy='afterInteractive' />
+      <Script src="https://connect.facebook.net/en_US/fbevents.js" strategy='afterInteractive' />
       <Script 
         strategy='afterInteractive'
         dangerouslySetInnerHTML={{
@@ -56,13 +57,28 @@ export default function Layout({ title, description = "Patio covers, decks, sunr
               if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
               n.queue=[];t=b.createElement(e);t.async=!0;
               t.src=v;s=b.getElementsByTagName(e)[0];
+              fbq('init', '451772699100876');
+              fbq('track', 'PageView');
+          `
+        }} 
+      />
+      {/* <Script 
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{ 
+          __html: `
+          !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '451772699100876');
               fbq('track', 'PageView');
           `
         }} 
-      />
+      /> */}
     </div>
   )
 }
