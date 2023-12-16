@@ -411,12 +411,12 @@ export default function Home({ pixelId, pixelAccessToken, }) {
         </section>
         <Features />
         <section className={styles.badges}>
-          <a href="https://www.bbb.org/us/wa/lacey/profile/sunroom-construction/precision-patio-covers-1296-1000082238/#sealclick">
+          {/* <a href="https://www.bbb.org/us/wa/lacey/profile/sunroom-construction/precision-patio-covers-1296-1000082238/#sealclick">
             <img src="https://seal-hawaii.bbb.org/seals/blue-seal-200-42-bbb-1000082238.png" alt="Better Business Bureau" width="200" height="42"/>
-          </a>
-          <a href="https://www.fourseasonssunrooms.com/locations/tacoma-wa/">
+          </a> */}
+          {/* <a href="https://www.fourseasonssunrooms.com/locations/tacoma-wa/">
             <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/four-seasons-copy-480w.webp" alt="Four Seasons Sunrooms" width="480" height="480" />
-          </a>
+          </a> */}
           <a href="https://app.gethearth.com/financing/15262/19517/prequalify?utm_campaign=15262&utm_content=general&utm_medium=custom-lp&utm_source=contractor&utm_term=19517">
             <img src="https://precisionpatios.s3.us-west-2.amazonaws.com/hearth-logo.jpg" alt="Hearth Financing" width="480" height="480"/>
           </a>

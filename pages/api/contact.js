@@ -17,6 +17,8 @@ export default async function handler(req, res) {
 
   // console.log('body', body)
 
+  console.log('from', process.env.EMAIL_ADDRESS)
+
   const messageToLead = {
     from: `Precision Patio Covers <${process.env.EMAIL_ADDRESS}>`,
     to: [body.email],
