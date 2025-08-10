@@ -34,13 +34,6 @@ export default function ContactPage() {
               })
               .then(response => { return response.json()})
               .then(data => {
-                
-                // if (data.message === 'messages sent') {
-                //   setSuccess(true)
-                //   console.log('SUCCESS:', data)
-                // } else {
-                //   console.log('DATA: ', data)
-                // }
                 console.log('DATA:', data)
               })
               .catch(error => console.error('ERROR:', error))
@@ -58,7 +51,7 @@ export default function ContactPage() {
             <input name="city" id="city" required />
             <label htmlFor="message">Message:</label>
             <textarea name="message" id="message" required></textarea>
-            <button>Send</button>
+            <button disabled={success}>{success ? 'Sent!' : 'Send'}</button>
           </form>
         }
       </main>
