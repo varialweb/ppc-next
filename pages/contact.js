@@ -34,16 +34,18 @@ export default function ContactPage() {
               })
               .then(response => { return response.json()})
               .then(data => {
-                if (data.message === 'messages sent') {
-                  setSuccess(true)
-                  ReactGA('gtag_UA_155239406_1.send', 'event', 'Form', 'Submit', 'Contact Form');
-                  console.log('SUCCESS:', data)
-                } else {
-                  console.log('DATA: ', data)
-                }
+                
+                // if (data.message === 'messages sent') {
+                //   setSuccess(true)
+                //   console.log('SUCCESS:', data)
+                // } else {
+                //   console.log('DATA: ', data)
+                // }
                 console.log('DATA:', data)
               })
               .catch(error => console.error('ERROR:', error))
+              ReactGA('gtag_UA_155239406_1.send', 'event', 'Form', 'Submit', 'Contact Form');
+              setSuccess(true)
             }}>
             <h1>Contact Us</h1>
             <label htmlFor="name">Name:</label>
